@@ -36,8 +36,8 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
 
 @media screen and (min-width: $small-device) {
     .container {
-        padding-right: calc(8.5vw - (100vw - 100%));
-        padding-left: 8.5vw;
+        padding-right: calc(6.5vw - (100vw - 100%));
+        padding-left: 6.5vw;
     }
     a, p, td, th, tr, code, pre, ol, ul, li, div  {
         font-size: $small-font-size;
@@ -240,12 +240,20 @@ div.container.blog#first-content {
                 font-style: italic;
                 font-weight: 400;
                 line-height: 1.2;
-                font-size: 85%;
+                font-size: 75%;
+
+                a {
+                    transition: color 0.2s ease;
+
+                    &:hover {
+                        color: #dbe3db;
+                    }
+                }
             }
         
             p.abstract {
                 font-family: $default-sans;
-                font-weight: 400;
+                font-weight: 300;
                 padding: 1vh 0;
                 font-size: 85%;
                 line-height: 1.6;
@@ -286,7 +294,7 @@ div.container.blog {
         font-weight: 400;
         line-height: 1.2;
         letter-spacing: 0px;
-        font-size: 70%;
+        font-size: 85%;
 
         b {
             font-weight: 600 !important;
@@ -324,4 +332,102 @@ select {
 .before figcaption,
 .after figcaption {
     font-size: 70%;
+}
+
+iframe, video {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+}
+
+.teaser_video {
+    width: 70%;
+    aspect-ratio: 16 / 9;
+    margin-top: 5vh;
+    margin-bottom: 1vh;
+}
+
+.video-intro {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    text-align: right;
+    font-style: italic;
+    font-size: 1em;
+    padding-bottom: 0.5vh;
+}
+
+/* Two-column figure layout */
+.two-column-figure {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    gap: 3vw;
+    align-items: start;
+
+    .text-column {
+        h2 {
+            margin-top: 0;
+        }
+    }
+
+    .figure-column {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+/* Stack vertically on mobile */
+@media screen and (max-width: 768px) {
+    .two-column-figure {
+        grid-template-columns: 1fr;
+        gap: 2vh;
+    }
+}
+
+/* Two equal-width columns for code sections */
+.two-column-equal {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3vw;
+    align-items: start;
+
+    .text-column {
+        min-width: 0;
+
+        h1, h2 {
+            margin-top: 0;
+        }
+
+        pre {
+            overflow-x: auto;
+            max-width: 100%;
+        }
+
+        code {
+            white-space: pre;
+            word-wrap: normal;
+        }
+    }
+}
+
+/* Stack vertically on mobile */
+@media screen and (max-width: 768px) {
+    .two-column-equal {
+        grid-template-columns: 1fr;
+        gap: 2vh;
+    }
+}
+
+/* Two equal-width columns for images */
+.columns-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
 }

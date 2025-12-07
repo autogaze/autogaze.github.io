@@ -13,16 +13,26 @@ $extra-extra-small-font-size: 14px;
 $extra-small-font-size: 15px;
 $small-font-size: 16px;
 $small-medium-font-size: 17px;
-$medium-font-size: 18px;
-$large-medium-font-size: 20px;
-$extra-large-medium-font-size: 22px;
-$large-font-size: 24px;
 
-// suitable for Poppins + Charter
-$extra-large-font-size: 26px;
+// suitable for Figtree
+$extra-large-font-size: 24px;
 $extra-extra-large-font-size: 30px;
 $super-large-font-size: 36px;
 $extra-super-large-font-size: 42px;
+$large-font-size: 24px;
+$medium-font-size: 18px;
+$large-medium-font-size: 20px;
+$extra-large-medium-font-size: 22px;
+
+// suitable for Poppins + Charter
+//$extra-large-font-size: 26px;
+//$extra-extra-large-font-size: 30px;
+//$super-large-font-size: 36px;
+//$extra-super-large-font-size: 42px;
+//$large-font-size: 24px;
+//$medium-font-size: 18px;
+//$large-medium-font-size: 20px;
+//$extra-large-medium-font-size: 22px;
 
 // suitable for Athletics + Tiempos Text
 // $extra-large-font-size: 30px;
@@ -46,7 +56,7 @@ $light-black: #858585;
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap');
 
 // Main Text Font
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@300;400;500;600;700;800;900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @font-face {
     font-family: 'Charter';
@@ -218,9 +228,9 @@ $light-black: #858585;
 // }
 
 
-$default-sans: 'Poppins';
-$default-serif: 'Charter';
+$default-sans: 'Figtree';
+$default-serif: 'Figtree';
 
-// Only use trial license for NON-COMMERCIAL PURPOSES
-// $default-sans: 'Athletics';
-// $default-serif: 'Tiempos Text';
+// Previous fonts:
+// Poppins + Charter (free)
+// Athletics + Tiempos Text (licensed)

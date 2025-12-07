@@ -24,13 +24,14 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
 }
 
 a {
+    text-decoration: none;
     text-underline-offset: 1px;
-    color: inherit;
+    color: #598864;
     font-family: inherit;
     font-size: inherit;
-    font-weight: inherit;
+    font-weight: 600;
     &:hover {
-        color: inherit;
+        color: #7BAA86;
 
     }
 }
@@ -131,8 +132,8 @@ svg {
 
 @media screen and (min-width: $small-device) {
     .container {
-        padding-right: calc(8.5vw - (100vw - 100%));
-        padding-left: 8.5vw;
+        padding-right: calc(6.5vw - (100vw - 100%));
+        padding-left: 6.5vw;
     }
     a, p, td, th, tr, code, pre, ol, ul, li, div  {
         font-size: $small-font-size;
@@ -389,11 +390,12 @@ footer {
 div.container.blog#first-content {
     padding-top: 2vh;
     background-color: $gray-5;
+    padding-right: calc(5.1vw - (100vw - 100%));
+    padding-left: 5.1vw;
     div.blog-title {
         display: grid;
         grid-template-columns: 1fr;
-        grid-row: 50vh;
-        
+
         &.white * {
             color: white;
     
@@ -421,14 +423,24 @@ div.container.blog#first-content {
 
             p.author {
                 padding: 4px 0;
-                font-weight: 500;
+                font-weight: 400;
                 font-style: italic;
                 line-height: 1.2;
+
+                a {
+                    font-weight: inherit;
+                    color: inherit;
+                    transition: color 0.2s ease;
+
+                    &:hover {
+                        color: #7BAA86;
+                    }
+                }
             }
 
             p.abstract {
                 font-family: $default-sans;
-                font-weight: 400;
+                font-weight: 300;
                 padding: 1vh 0;
             }
 
@@ -493,7 +505,7 @@ div.container.blog {
         padding: 1vh 0;
         font-weight: 500;
         line-height: 1.2;
-        font-size: 90%;
+        font-size: 105%;
 
         b {
             font-weight: 700 !important;
@@ -521,6 +533,22 @@ div.container.blog {
         }
     }
 
+    // Span labels for figure captions
+    #naive-mllm-label {
+        font-weight: 700;
+        color: #a6a6a6;
+    }
+
+    #prune-mllm-label {
+        font-weight: 700;
+        color: #47804e;
+    }
+
+    #autogaze-label {
+        font-weight: 700;
+        color: #ef8c25;
+    }
+
     img {
         padding-bottom: 1vh;
     }
@@ -530,7 +558,7 @@ div.container.blog {
     }
 
     &.main {
-       padding: 0.5vh 6vw;
+       padding: 0.5vh 3vw;
        &.comment {
             .content-comment {
                 display: none;
@@ -594,6 +622,8 @@ div.container.blog {
 @media screen and (min-width: $small-device) {
     div.container.blog#first-content {
         padding-top: 3vh;
+        padding-right: calc(5.525vw - (100vw - 100%));
+        padding-left: 5.525vw;
         div.blog-title {
             grid-template-columns: 1fr 1fr;
             column-gap: 2vw;
@@ -608,7 +638,7 @@ div.container.blog {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                padding: 3vh 0;
+                padding: 1vh 0;
 
             }
 
@@ -616,7 +646,7 @@ div.container.blog {
                 grid-template-columns: 1fr;
 
                 .blog-intro {
-                    padding: 6vh 6vw;
+                    padding: 6vh 5.1vw;
                 }
                 
                 h1 {
@@ -643,7 +673,7 @@ div.container.blog {
         }
     
         &.main {
-           padding: 1vh 15vw;
+           padding: 1vh 7.5vw;
 
             &.comment {
                 padding-left: 15vw;
@@ -675,23 +705,24 @@ div.container.blog {
 @media screen and (min-width: $medium-device) {
     div.container.blog#first-content {
         padding-top: 4vh;
+        padding-right: calc(10.2vw - (100vw - 100%));
+        padding-left: 10.2vw;
         div.blog-title {
             grid-template-columns: 1fr 1fr;
-            grid-row: 75vh;
             column-gap: 3vw;
-    
+
             .blog-intro {
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                padding: 3vh 0;
+                padding: 1vh 0;
             }
 
             &.no-cover {
                 grid-template-columns: 1fr;
 
                 .blog-intro {
-                    padding: 6vh 7.5vw;
+                    padding: 6vh 6.375vw;
                 }
             }
             
@@ -707,7 +738,7 @@ div.container.blog {
         }
     
         &.main {
-           padding: 1.5vh 20vw;
+           padding: 1.5vh 10vw;
 
            &.comment {
                 padding-left: 20vw;
@@ -738,11 +769,12 @@ div.container.blog {
 @media screen and (min-width: $large-device) {
     div.container.blog#first-content {
         padding-top: 6vh;
+        padding-right: calc(12.75vw - (100vw - 100%));
+        padding-left: 12.75vw;
         div.blog-title {
             grid-template-columns: 1fr 1fr;
-            grid-row: 75vh;
             column-gap: 4vw;
-    
+
             .blog-intro {
                 padding: 5vh 0;
     
@@ -755,7 +787,7 @@ div.container.blog {
                 grid-template-columns: 1fr;
 
                 .blog-intro {
-                    padding: 6vh 9vw;
+                    padding: 6vh 7.65vw;
                 }
             }
 
@@ -764,14 +796,14 @@ div.container.blog {
             }
         }
     }
-    
+
     div.container.blog {
         &.first {
             margin-top: 4vh;
         }
     
         &.main {
-           padding: 2vh 24vw;
+           padding: 2vh 12vw;
 
            &.comment {
                 padding-left: 24vw;
@@ -802,14 +834,15 @@ div.container.blog {
 
 @media screen and (min-width: $extra-large-device) {
     div.container.blog#first-content {
+        padding-right: calc(15.3vw - (100vw - 100%));
+        padding-left: 15.3vw;
         div.blog-title {
             grid-template-columns: 1fr 1fr;
-            grid-row: 75vh;
             column-gap: 4vw;
-    
+
             .blog-intro {
                 padding: 5vh 0;
-    
+
                 p {
                     padding: 1.5vh 0;
                 }
@@ -819,23 +852,23 @@ div.container.blog {
                 grid-template-columns: 1fr;
 
                 .blog-intro {
-                    padding: 6vh 9vw;
+                    padding: 6vh 7.65vw;
                 }
             }
-    
+
             .blog-cover {
                 padding: 5vh 0;
             }
         }
     }
-    
+
     div.container.blog {
         &.first {
             margin-top: 5vh;
         }
-    
+
         &.main {
-           padding: 2vh 27vw;
+           padding: 2vh 13.5vw;
 
            &.comment {
                padding-left: 27vw;
@@ -863,24 +896,25 @@ div.container.blog {
 
 @media screen and (min-width: $extra-extra-large-device) {
     div.container.blog#first-content {
+        padding-right: calc(18.7vw - (100vw - 100%));
+        padding-left: 18.7vw;
         div.blog-title {
             grid-template-columns: 1fr 1fr;
-            grid-row: 65vh;
             column-gap: 5vw;
-    
+
             .blog-intro {
                 padding: 5vh 0;
-    
+
                 p {
                     padding: 1.5vh 0;
                 }
             }
-    
+
             &.no-cover {
                 grid-template-columns: 1fr;
 
                 .blog-intro {
-                    padding: 6vh 8vw;
+                    padding: 6vh 6.8vw;
                 }
             }
 
@@ -889,14 +923,14 @@ div.container.blog {
             }
         }
     }
-    
+
     div.container.blog {
         &.first {
             margin-top: 5vh;
         }
-    
+
         &.main {
-           padding: 2vh 30vw;
+           padding: 2vh 15vw;
 
            &.comment {
                padding-left: 30vw;
@@ -924,14 +958,15 @@ div.container.blog {
 
 @media screen and (min-width: $super-large-device) {
     div.container.blog#first-content {
+        padding-right: calc(20.4vw - (100vw - 100%));
+        padding-left: 20.4vw;
         div.blog-title {
             grid-template-columns: 1fr 1fr;
-            grid-row: 65vh;
             column-gap: 6vw;
-    
+
             .blog-intro {
                 padding: 5vh 0;
-    
+
                 p {
                     padding: 1.5vh 0;
                 }
@@ -941,7 +976,7 @@ div.container.blog {
                 grid-template-columns: 1fr;
 
                 .blog-intro {
-                    padding: 6vh 8vw;
+                    padding: 6vh 6.8vw;
                 }
             }
 
@@ -950,14 +985,14 @@ div.container.blog {
             }
         }
     }
-    
+
     div.container.blog {
         &.first {
             margin-top: 5vh;
         }
-    
+
         &.main {
-           padding: 2vh 32vw;
+           padding: 2vh 16vw;
 
            &.comment {
                padding-left: 32vw;
@@ -984,24 +1019,25 @@ div.container.blog {
 
 @media screen and (min-width: $super-super-large-device) {
     div.container.blog#first-content {
+        padding-right: calc(27.2vw - (100vw - 100%));
+        padding-left: 23.8vw;
         div.blog-title {
             grid-template-columns: 1fr 1fr;
-            grid-row: 75vh;
             column-gap: 7vw;
-    
+
             .blog-intro {
                 padding: 5vh 0;
-    
+
                 p {
                     padding: 1.5vh 0;
                 }
             }
-    
+
             &.no-cover {
                 grid-template-columns: 1fr;
 
                 .blog-intro {
-                    padding: 6vh 10vw;
+                    padding: 6vh 8.5vw;
                 }
             }
 
@@ -1010,14 +1046,14 @@ div.container.blog {
             }
         }
     }
-    
+
     div.container.blog {
         &.first {
             margin-top: 5vh;
         }
-    
+
         &.main {
-           padding: 2vh 38vw;
+           padding: 2vh 19vw;
 
            &.comment {
                padding-left: 38vw;
@@ -1283,6 +1319,7 @@ pre code {
     background-color: $gray-1 !important;
     display: block;
     padding: 1.5vh 1.5vw !important;
+    margin: 0 !important;
     overflow-x: auto;
 }
 
