@@ -3,28 +3,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clarity: A Minimalist Website Template for AI Research</title>
-    <meta name="description" content="We've presented Clarity, a minimalist and elegant website template for AI research.">
+    <title>AutoGaze: Efficient and Scalable Video Understanding</title>
+    <meta name="description" content="AutoGaze: Attend Before Attention - Efficient and Scalable Video Understanding via Autoregressive Gazing">
     <meta name="referrer" content="no-referrer-when-downgrade">
     <meta name="robots" content="all">
     <meta content="en_EN" property="og:locale">
     <meta content="website" property="og:type">
-    <meta content="https://shikun.io/projects/clarity" property="og:url">
-    <meta content="Clarity" property="og:title">
-    <meta content="Website Template for AI Research" property="og:description">
+    <meta content="AutoGaze" property="og:title">
+    <meta content="Efficient and Scalable Video Understanding via Autoregressive Gazing" property="og:description">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@your_twitter_id">
-    <meta name="twitter:description" content="Clarity: A Minimalist Website Template for AI Research">
-    <meta name="twitter:image:src" content="assets/figures/clarity.png">
-    
+    <meta name="twitter:description" content="AutoGaze: Efficient and Scalable Video Understanding via Autoregressive Gazing">
+    <meta name="twitter:image:src" content="assets/figures/autogaze/teaser_v14.png">
+
     <link rel="stylesheet" type="text/css" media="all" href="assets/stylesheets/main_free.css" />
-    <link rel="stylesheet" type="text/css" media="all" href="clarity/clarity.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/foundation.min.css">
     <link href="assets/fontawesome-free-6.6.0-web/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>
     <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
-    <script src="assets/scripts/navbar.js"></script>  <!-- Comment to remove table of content. -->
+    <script src="assets/scripts/navbar.js"></script>
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
             "HTML-CSS": {
@@ -43,191 +40,279 @@
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        /* White background for all images */
+        .container.blog.main img,
+        .container.blog.gray img,
+        .container.blog.extra-large img {
+            background-color: white;
+            padding: 10px;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Title Page -->
-    <!-- Dark Theme Example: Change the background colour dark and change the following div "blog-title" into "blog-title white". -->
-    <!-- Gradient Example: style="background: linear-gradient(135deg, #E0E4E6, #C8D5E0);" -->
-    <div class="container blog" id="first-content" style="background: linear-gradient(180deg, #E0E4E6, #D0D8E0);">
-        <!-- If you don't have a project cover: Change "blog-title" into "blog-title no-cover"  -->
-        <div class="blog-title">
+    <div class="container blog" id="first-content" style="background: linear-gradient(180deg, #4d5e4d, #7a8d7a);">
+        <div class="blog-title white">
             <div class="blog-intro">
                 <div>
-                    <h1 class="title">Clarity: A Minimalist Website Template for AI Research</h1>
+                    <h1 class="title">Attend Before Attention:<br>Efficient and Scalable Video Understanding via Autoregressive Gazing</h1>
                     <p class="author">
-                        John Doe <sup>1</sup>, John Doe <sup>2</sup>, John Doe, John Doe, and John Doe
+                        <a href="https://bfshi.github.io/" target="_blank">Baifeng Shi</a>*<sup>1,4</sup>, <a href="https://stephanie-fu.github.io/" target="_blank">Stephanie Fu</a>*<sup>1</sup>, <a href="https://tonylian.com/" target="_blank">Long Lian</a><sup>1</sup>, <a href="https://sites.google.com/site/yhrspace/" target="_blank">Hanrong Ye</a><sup>4</sup>,
+                        <a href="https://deigen.net/" target="_blank">David Eigen</a><sup>3</sup>, <a href="https://scholar.google.com/citations?user=_qdnxtsAAAAJ&hl=en" target="_blank">Aaron Reite</a><sup>3</sup>, <a href="https://sites.google.com/site/boyilics/home" target="_blank">Boyi Li</a><sup>1,4</sup>, <a href="https://jankautz.com/" target="_blank">Jan Kautz</a><sup>4</sup>, <a href="https://hanlab.mit.edu/songhan" target="_blank">Song Han</a><sup>2,4</sup>,
+                        <a href="https://dchan.cc/" target="_blank">David M. Chan</a><sup>1†</sup>, <a href="https://pmolchanov.com/" target="_blank">Pavlo Molchanov</a><sup>4†</sup>, <a href="https://people.eecs.berkeley.edu/~trevor/" target="_blank">Trevor Darrell</a><sup>1†</sup>, <a href="https://hongxu-yin.github.io/" target="_blank">Hongxu Yin</a><sup>4†</sup>
                     </p>
                     <p class="author" style="padding-top: 0px;">
-                        <sup>1</sup> University of Oxford <br>
-                        <sup>2</sup> Imperial College London
+                        <sup>1</sup>UC Berkeley &nbsp; <sup>2</sup>MIT &nbsp; <sup>3</sup>Clarifai &nbsp; <sup>4</sup>NVIDIA
+                    </p>
+                    <p class="author" style="padding-top: 0px; font-size: 14px;">
+                        <sup>*</sup>Equal contribution &nbsp;&nbsp; <sup>†</sup>Equal advising
                     </p>
                     <p class="abstract">
-                        Welcome to Clarity — an open-source, minimalist website template designed for presenting AI research. Originally developed as the foundation for my personal website, Clarity offers a modular, clean design that is easy to customise for simple, project-based website creation. With Clarity, you can effectively showcase your work, ensuring your research stands out in a visually appealing and professional manner. 
+                        <b>AutoGaze</b> is a lightweight module that removes redundant video patches before being processed downstream by a ViT or MLLM. Trained with next-token prediction and reinforcement learning, AutoGaze autoregressively <b>selects a minimal set of multi-scale patches that reconstructs the video within a user-specified error threshold, eliminating redundancy while preserving information</b>. Empirically, AutoGaze reduces visual tokens by 4-100× and accelerates ViTs and MLLMs by up to 19×, enabling scaling MLLMs to 1K-frame 4K-resolution videos and achieving superior results on video benchmarks.
                     </p>
-                    <!-- Using FontAwesome Pro -->
-                    <!-- <div class="info">
-                        <div>
-                            <a href="https://arxiv.org" class="button icon" style="background-color: rgba(255, 255, 255, 0.3)"> Paper <i class="far fa-book-open"></i></a> &nbsp;&nbsp; 
-                            <a href="https://github.com" class="button icon" style="background-color: rgba(255, 255, 255, 0.3)">Code <i class="far fa-code"></i></a>  &nbsp;&nbsp; 
-                            <a href="https://www.microsoft.com/en-gb/microsoft-365/powerpoint" class="button icon" style="background-color: rgba(255, 255, 255, 0.3);">Slides <i class="far fa-presentation"></i></a>  &nbsp;&nbsp; 
-                            <a href="https://huggingface.co/spaces" class="button icon" style="background-color: rgba(255, 255, 255, 0.3)">Demo <i class="fa-light fa-face-smiling-hands"></i></a>
-                        </div>
-                    </div> -->
-
-                    <!-- Using FontAwesome Free -->
+                    <p class="abstract">
+                        Furthermore, we introduce <b>HLVid</b>: the first high-resolution, long-form video QA benchmark with multi-minute 4K videos, where an MLLM scaled with AutoGaze outperforms the previous SOTA MLLM by 6.3%.
+                    </p>
+                    <br>
                     <div class="info">
                         <div>
-                            <a href="https://arxiv.org" class="button icon" style="background-color: rgba(255, 255, 255, 0.2)"> Paper <i class="fa-solid fa-book-open"></i></a> &nbsp;&nbsp; 
-                            <a href="https://github.com" class="button icon" style="background-color: rgba(255, 255, 255, 0.2)">Code <i class="fa-solid fa-code"></i></a>  &nbsp;&nbsp; 
-                            <a href="https://www.microsoft.com/en-gb/microsoft-365/powerpoint" class="button icon" style="background-color: rgba(255, 255, 255, 0.2);">Slides <i class="fa-regular fa-file-powerpoint"></i></a> &nbsp;&nbsp; 
-                            <a href="https://huggingface.co/spaces/" class="button icon" style="background-color: rgba(255, 255, 255, 0.2)">Demo <i class="fa-solid fa-laptop-code"></i></a> 
+                            <a href="#" class="button icon" style="background-color: rgba(255, 255, 255, 0.2)">Paper <i class="fa-solid fa-book-open"></i></a> &nbsp;&nbsp;
+                            <a href="#" class="button icon" style="background-color: rgba(255, 255, 255, 0.2)">Code <i class="fa-solid fa-code"></i></a>  &nbsp;&nbsp;
+                            <a href="#" class="button icon" style="background-color: rgba(255, 255, 255, 0.2)">HLVid Benchmark <i class="fa-solid fa-database"></i></a> &nbsp;&nbsp;
+                            <a href="#" class="button icon" style="background-color: rgba(255, 255, 255, 0.2)">Demo <i class="fa-solid fa-laptop-code"></i></a>
                         </div>
                     </div>
                 </div>
-               
+
                 <div class="info">
-                    <p>CVPR 2048 / Best Paper Award</p>
                 </div>
             </div>
 
             <div class="blog-cover">
-                <img class="foreground" src="assets/figures/clarity.png">
-                <img class="background" src="assets/figures/clarity.png">
+                <img class="foreground" src="assets/figures/falling_tiles.png">
             </div>
         </div>
     </div>
 
+    <div class="container blog extra-large">
+        <video controls src="./assets/figures/video.mp4" class="teaser_video" title="AutoGaze: Efficient and Scalable Video Understanding via Autoregressive Gazing"></video>
+        <p class="video-intro">watch this for a quick intro!</p>
+    </div>
 
+    <div class="container blog main two-column-equal">
+        <div class="text-column">
+            <h1>Quickstart</h1>
+            <p>
+                See <a href="https://github.com/stephanie-fu/gengaze/blob/release/QUICK_START.md">QUICK_START.md</a> in the codebase for the full guide.
+            </p>
+            <br>
+            <pre><code class="python">import torch
+from transformers import VivitImageProcessor
+from autogaze.models.autogaze import AutoGaze
+
+autogaze_model = AutoGaze.from_pretrained("bfshi/AutoGaze")
+autogaze_transform = VivitImageProcessor.from_pretrained("facebook/vit-mae-large",
+                                              size=autogaze_model.scales[-1],
+                                              crop_size=autogaze_model.scales[-1])
+# ...prepare video input...
+
+with torch.inference_mode():
+    gaze_outputs = autogaze_model({"video": video_input_autogaze},
+                      gazing_ratio=0.75,
+                      task_loss_requirement=0.7)</code></pre>
+        </div>
+        <div class="text-column">
+            <h1>&nbsp;</h1>
+            <p>&nbsp;</p>
+            <br>
+            <pre><code class="python"># Use HLVid: 4K, long video benchmark
+from datasets import load_dataset
+ds = load_dataset("------")</code></pre>
+        </div>
+    </div>
     <div class="container blog main first" id="blog-main">
-        <h1 >
-            Introduction
-        </h1>
-        <p class='text'>
-            Lorem ipsum odor amet, consectetuer adipiscing elit. Urna non ligula sed ante ultricies. Nam nam tortor elit turpis fermentum praesent. Tristique porttitor sodales rhoncus duis tellus mus vivamus lacus. Nam platea lectus aliquam placerat; quis dignissim nisi ornare. Habitant himenaeos adipiscing dictum fringilla metus.
+        <h1>Introduction</h1>
+        <p class="text">
+            When observing a moving scene, humans don't process every detail equally. Our eyes dart around to moving objects, capture fine details, and skip over static backgrounds, efficiently understanding scenes by selectively attending to informative regions. This allows us to process high-FPS, high-resolution video streams in real time.
         </p>
 
         <p class="text">
-            Sagittis donec nibh etiam leo eget iaculis proin. Dapibus morbi vitae ad vestibulum montes odio varius. Ullamcorper finibus nibh suscipit libero velit suspendisse. Potenti potenti risus integer libero semper potenti vivamus. Libero cras lectus netus faucibus nisl. Congue aliquet congue ante netus eu, vestibulum arcu. Scelerisque tempor taciti senectus mus penatibus condimentum consequat in. Tempor conubia molestie tristique; orci taciti augue. Justo ultrices consequat hac vivamus proin sodales.
+            In contrast, modern video understanding models still process every pixel in every frame equally, <b>wasting computation due to spatiotemporal redundancy in videos</b>. Thus, these models cannot scale to <em>long-form</em> and <em>high-resolution</em> videos crucial for real-world applications due to computational cost.
+        </p>
+
+        <p class="text">
+            We propose <b>AutoGaze, a lightweight model that attends to informative patches and removes redundant ones before passing into a ViT or MLLM</b>. AutoGaze perceives each frame and autoregressively selects a minimal set of multi-scale patches which, along with the selected patches from previous frames, can reconstruct the current frame.
         </p>
     </div>
 
-    <div class="container blog main gray">
-        <img src="clarity/images/vit.png">
+    <div class="container blog extra-large">
+        <img src="assets/figures/autogaze/teaser_v14.png" style="width: 100%;">
         <p class="caption">
-            Erat id non venenatis nullam leo nisl risus fames. Quis montes tortor aenean posuere non. Maximus dui cras enim tristique; ipsum pellentesque ut. Mauris hac felis elit scelerisque nascetur risus adipiscing ultrices. Quis augue pulvinar laoreet facilisis vel. Pharetra blandit nunc id, sem cubilia sit porttitor. Montes hendrerit vestibulum vulputate tincidunt facilisis metus. Interdum mi vivamus nunc consectetur adipiscing; aptent semper dictum.
+            <b>Left: </b> Existing MLLMs either <span id="naive-mllm-label">process all pixels which is inefficient</span>, or <span id="prune-mllm-label">prune tokens only in their LLMs, leaving ViTs the computational bottleneck</span>. In contrast, <span id="autogaze-label">AutoGaze eliminates redundant patches by up to 100× <em>before</em> ViTs, accelerating ViTs and MLLMs by up to 19×</span>.
+        </p>
+        <p class="caption">
+            <b>Right: </b> This efficiency enables MLLMs with AutoGaze to <b>scale to 1K-frame, 4K-resolution videos and achieve superior performance</b> on HLVid, our new long, high-resolution video benchmark, surpassing prior MLLMs limited to short or low-resolution videos.
         </p>
     </div>
 
     <div class="container blog main">
-        <h1>Results</h1>
+        <h1>Architecture and Training</h1>
         <p class="text">
-            Arcu imperdiet nunc, dignissim ornare arcu nam eros cras venenatis. Non volutpat parturient luctus eros litora natoque; elementum dui. Nulla cubilia et nascetur dictum nisi phasellus. Natoque himenaeos porta vulputate interdum id mollis. Fames diam integer semper ligula per. Sapien ex magnis pellentesque neque rhoncus conubia. Purus torquent nunc ligula auctor cras pharetra. Porttitor vulputate dis ante suspendisse a iaculis massa sagittis.
+            Given an input video, AutoGaze selects a minimal set of patches (i.e., "gazing") which can reconstruct the video within some user-specified reconstruction loss threshold or patch budget.
+            The model is made up of a convolutional encoder and autoregressive transformer decoder, totaling 3M parameters. The decoder's vocabulary includes patches from four scales, letting the decoder select different scales for regions with different level of detail and reducing patches while preserving reconstruction quality.
         </p>
     </div>
 
-    <div class="container blog extra-large gray">
-        <div class="slide-menu">
-            <ul class="dots" id="slide-menu">
-                <li class="dot active"></li>
-                <li class="dot"></li>
-                <li class="dot"></li>
-            </ul>
-        </div>
-       
-        <div class="slide-content", style="display: block;">
-            <div class="columns-4">
-                <img src="https://clickprops.co.uk/wp-content/uploads/2022/05/PP15PS-California-Blue.jpg">
-                <img src="https://clickprops.co.uk/wp-content/uploads/2022/05/PP15PS-California-Blue.jpg">
-                <img src="https://clickprops.co.uk/wp-content/uploads/2022/05/PP15PS-California-Blue.jpg">
-                <img src="https://clickprops.co.uk/wp-content/uploads/2022/05/PP15PS-California-Blue.jpg">
-            </div>
-            <p class="caption">
-                Nulla quis porttitor varius phasellus dolor curae primis. Suscipit sit adipiscing nibh justo hac. Turpis massa ridiculus sit, finibus quis litora sagittis torquent. Dignissim suscipit quam curabitur sit velit, rhoncus tincidunt purus? At netus efficitur penatibus purus amet urna etiam. Leo neque ligula varius lacinia torquent vehicula. Tempus non mauris vel placerat natoque.
-            </p>
-        </div>
+    <div class="container blog extra-large">
+        <h2>Training Pipeline</h2>
+        <p class="text">
+            AutoGaze is trained in two stages: we first pre-train with next-token prediction (NTP) on ground-truth gazing sequences, then further post-train AutoGaze using RL with reconstruction reward to discover gazing sequences with lower reconstruction loss.
+        </p>
+        <img src="assets/figures/autogaze/architecture_v15.png" style="width: 100%;">
+        <p class="caption">
+            <b>Left & Middle: </b> Given a video, AutoGaze processes each frame and outputs indices of multi-scale patches based on the history of frames and selected patches. Once AutoGaze believes the previously-gazed patches are sufficient to reconstruct the current frame, it automatically stops gazing and moves to the next frame.
+        </p>
+        <p class="caption">
+        <b>Right: </b> AutoGaze is trained in two stages: next-token-prediction pre-training on collected gazing sequences, and RL post-training with reconstruction reward.
+        </p>
+    </div>
 
-        <div class="slide-content", style="display: none;">
-            <div class="columns-6">
-                <img src="https://clickprops.co.uk/wp-content/uploads/2022/05/PP15PS-California-Blue.jpg">
-                <img src="https://clickprops.co.uk/wp-content/uploads/2022/05/PP15PS-California-Blue.jpg">
-                <img src="https://clickprops.co.uk/wp-content/uploads/2022/05/PP15PS-California-Blue.jpg">
-                <img src="https://clickprops.co.uk/wp-content/uploads/2022/05/PP15PS-California-Blue.jpg">
-                <img src="https://clickprops.co.uk/wp-content/uploads/2022/05/PP15PS-California-Blue.jpg">
-                <img src="https://clickprops.co.uk/wp-content/uploads/2022/05/PP15PS-California-Blue.jpg">
-            </div>
-            <p class="caption">
-                Nulla quis porttitor varius phasellus dolor curae primis. Suscipit sit adipiscing nibh justo hac. Turpis massa ridiculus sit, finibus quis litora sagittis torquent. Dignissim suscipit quam curabitur sit velit, rhoncus tincidunt purus? At netus efficitur penatibus purus amet urna etiam. Leo neque ligula varius lacinia torquent vehicula. Tempus non mauris vel placerat natoque.
+    <div class="container blog extra-large">
+    <h1>Qualitative Results</h1>
+        <p class="text">
+            For each example below, we show the original video, gazed patches from two scales, and reconstructed video.
+        </p>
+        <p class="text">
+            In general, AutoGaze can 1) focus on moving objects while removing redundancy in static regions <b>(a-e)</b>, 2) adapt to scene changes by selecting more patches <b>(c, e)</b>, and 3) distribute attention with different granularity based on detailedness <b>(c, f)</b>. This allows AutoGaze to select a small ratio of patches (gazing ratio) without much information loss, as reflected by the reconstruction quality.
+        </p>
+    <img src="assets/figures/autogaze/main_results.png" style="width: 100%;">
+    </div>
+
+    <div class="container blog main">
+        <h1>What is AutoGaze Paying Attention To?</h1>
+        <p class="text">
+            AutoGaze's efficiency comes from selecting only a small fraction of patches — but does it make principled decisions about which patches to select and at what scale?
+        </p>
+    </div>
+    <div class="container blog main two-column-figure">
+        <div class="text-column">
+            <h2>AutoGaze Targets Moving Patches</h2>
+            <p class="text">
+                Motion is a primary source of new information across video frames, and intuitively should be selected. We indeed find that across all scales, AutoGaze more frequently selects patches with higher optical flow.
+            </p>
+            <p class="text">
+                <b>Left: </b> AutoGaze uses coarser scales to capture higher optical flow.
+                <br>
+                <b>Right: </b> Across all scales, AutoGaze more frequently selects patches with higher optical flow. Error bars represent SEM.
             </p>
         </div>
+        <div class="figure-column">
+            <img src="assets/figures/autogaze/opticalflow_4.png">
+        </div>
+    </div>
 
-        <div class="slide-content", style="display: none;">
-            <div class="columns-8">
-                <img src="https://clickprops.co.uk/wp-content/uploads/2022/05/PP15PS-California-Blue.jpg">
-                <img src="https://clickprops.co.uk/wp-content/uploads/2022/05/PP15PS-California-Blue.jpg">
-                <img src="https://clickprops.co.uk/wp-content/uploads/2022/05/PP15PS-California-Blue.jpg">
-                <img src="https://clickprops.co.uk/wp-content/uploads/2022/05/PP15PS-California-Blue.jpg">
-                <img src="https://clickprops.co.uk/wp-content/uploads/2022/05/PP15PS-California-Blue.jpg">
-                <img src="https://clickprops.co.uk/wp-content/uploads/2022/05/PP15PS-California-Blue.jpg">
-                <img src="https://clickprops.co.uk/wp-content/uploads/2022/05/PP15PS-California-Blue.jpg">
-                <img src="https://clickprops.co.uk/wp-content/uploads/2022/05/PP15PS-California-Blue.jpg">
-            </div>
-            <p class="caption">
-                Nulla quis porttitor varius phasellus dolor curae primis. Suscipit sit adipiscing nibh justo hac. Turpis massa ridiculus sit, finibus quis litora sagittis torquent. Dignissim suscipit quam curabitur sit velit, rhoncus tincidunt purus? At netus efficitur penatibus purus amet urna etiam. Leo neque ligula varius lacinia torquent vehicula. Tempus non mauris vel placerat natoque.
+    <div class="container blog main two-column-figure">
+        <div class="text-column">
+            <h2>Gazing Scale Correlates with Patch Detail</h2>
+            <p class="text">
+                Regions with different levels of detail should be represented with different scales.
             </p>
+            <p class="text">
+                <b>Left: </b> At finer scales, AutoGaze selects more detailed patches (measured as Laplacian variance).
+                <br>
+                <b>Right: </b> With increasing detail, AutoGaze uses finer scales (ρ = .12, p < 0.001). Error bars = SEM.
+            </p>
+        </div>
+        <div class="figure-column">
+            <img src="assets/figures/autogaze/texture_stats.png">
         </div>
     </div>
 
     <div class="container blog main">
-        <h1>Additional Analysis</h1>
-        <h2>Observation 1</h2>
+        <h1>Generalization to Out-of-Distribution Videos</h1>
         <p class="text">
-            Lorem ipsum odor amet, consectetuer adipiscing elit. Himenaeos sociosqu facilisi ante; cubilia sociosqu magna libero. Dignissim vehicula felis taciti sollicitudin quam ligula a, vivamus porta. Tellus facilisi pharetra non posuere a sapien. Sagittis felis lectus ac interdum pretium sit himenaeos.
+            AutoGaze successfully generalizes to unconventional scenarios including CCTV footage, robot videos, and videos with constantly swapping foreground objects. Across different style transfers, AutoGaze also maintains consistent gazing patterns, continuing to track changing regions.
         </p>
-        <ol>
-            <li>
-                <p class="text">Conubia aliquet semper inceptos ultricies vel metus fusce litora. </p>
-            </li>
-            <li>
-                <p class="text">Ultricies dis vehicula non lobortis hac sagittis urna dignissim ex. 
+    </div>
+        <div class="container blog extra-large">
+            <img src="assets/figures/autogaze/autogaze_ood_semantics.png" style="width: 100%;">
+        </div>
+
+        <div class="container blog extra-large">
+            <img src="assets/figures/autogaze/autogaze_ood_style.png" style="width: 100%;">
+        </div>
+    <div class="container blog main two-column-figure">
+            <div class="text-column">
+                <h2>Generalization to Videos with Camera Motion</h2>
+                <p class="text">
+                    AutoGaze also generalizes to videos with camera motion. Although the gazing pattern is less intuitive due to the global motion,
+                    the gazing ratio remains similar and the reconstruction quality is still high.
                 </p>
-            </li>
-        </ol>
-
-        <h2>Observation 2</h2>
-        <p class="text">
-            Lorem ipsum odor amet, consectetuer adipiscing elit. Himenaeos sociosqu facilisi ante; cubilia sociosqu magna libero. Dignissim vehicula felis taciti sollicitudin quam ligula a, vivamus porta. Tellus facilisi pharetra non posuere a sapien. Sagittis felis lectus ac interdum pretium sit himenaeos.
-        </p>
-
-        <ul >
-            <li>
-                <p class="text">Conubia aliquet semper inceptos ultricies vel metus fusce litora. </p>
-            </li>
-            <li>
-                <p class="text">Ultricies dis vehicula non lobortis hac sagittis urna dignissim ex. 
-                </p>
-            </li>
-        </ul>
+            </div>
+        <div class="text-column">
+            <video controls src="./assets/figures/camera_motion.mp4"></video>
+        </div>
     </div>
 
+    <div class="container blog main">
+        <h1>Efficiency of ViTs and MLLMs with AutoGaze</h1>
+
+        <h2>How many patches do we need?</h2>
+
+        <p class="text">
+            There is a trade-off between gazing ratio and reconstruction loss: videos with higher FPS or resolution need lower gazing ratio to reach the same reconstruction quality.
+            We find that a reconstruction loss threshold of 0.7 usually leads to <b>less than 0.5% performance degradation across benchmarks while allowing videos to be represented with 4×-100× fewer patches</b>.
+        </p>
+    </div>
 
     <div class="container blog main">
-        <h1>Conclusion</h1>
+        <img src="assets/figures/autogaze/loss_recon_cut.png" style="width: 70%">
+    </div>
+
+    <div class="container blog main">
+        <h2>What speedups do we get?</h2>
         <p class="text">
-            Per aptent diam; ut in mauris ultricies torquent conubia dolor. Aliquet venenatis sapien, dictum finibus ad dui. Finibus sollicitudin nullam consectetur malesuada molestie semper dolor. Platea eget hac cursus aptent maecenas penatibus vulputate. Ligula libero torquent sit per praesent praesent. Sodales risus mattis enim odio risus tristique. Dapibus vivamus quis scelerisque sollicitudin penatibus placerat erat. Ante aliquet vel; morbi quisque leo morbi. Ac sollicitudin imperdiet lacus integer cursus metus parturient euismod sociosqu.
+            When using the gazing ratio required for a reconstruction loss of 0.7, AutoGaze achieves up to 19× and 10× speedup for ViTs and MLLMs respectively, enabling scaling to 4K resolution. See below for latency plots for ending one second of video with varying FPS and resolution.
         </p>
+    </div>
+
+    <div class="container blog extra-large">
+        <div class="columns-2">
+            <img src="assets/figures/autogaze/latency_vision.png">
+            <img src="assets/figures/autogaze/latency_llm.png">
+        </div>
+    </div>
+
+    <div class="container blog main">
+        <h1>HLVid: High-Resolution, Long-Form Video Benchmark</h1>
+        <p class="text">
+            Although AutoGaze enables efficient understanding of long, high-resolution videos, <b>benchmarks to evaluate this capability are still missing</b>. We propose <b>HLVid, the first long-form, high-resolution video QA benchmark</b> featuring <b>600 QA pairs on 5-10 minute, 4K-resolution videos</b>. Each question is manually reviewed to ensure high resolution and understanding throughout the entire video is required.
+        </p>
+        <p class="text">
+            <a href="">Check out and use HLVid on HuggingFace!</a>
+        </p>
+
+        <pre><code class="python">from datasets import load_dataset
+ds = load_dataset("bfshi/HLVid")</code></pre>
+    </div>
+    <div class="container blog main">
+        <h1>Performance on Video Benchmarks</h1>
+        <p class="text">
+            We scale NVILA-8B to 1K-frame 4K-resolution videos, demonstrating consistent improvements on various benchmarks and outperforming strong MLLMs such as Qwen2.5-VL. See <a href="#">the paper</a> for detailed quantitative results comparing with other MLLMs.
+        </p>
+    </div>
+
+    <div class="container blog extra-large">
+        <img src="assets/figures/autogaze/mllm_benchmarks.png" style="width: 100%;">
     </div>
 
     <div class="container blog main">
         <h1>Citation</h1>
         <p class="text">
-            Dictumst eu himenaeos malesuada nisi eros auctor id suspendisse. Ipsum parturient est vitae proin maecenas. Nulla mollis vivamus cras nam dapibus consectetur. Id efficitur ac ultricies ornare at litora. Vestibulum nibh cursus eu gravida vivamus sem vulputate. Montes nisi ipsum urna vitae semper suscipit.
+            If you find AutoGaze useful for your research, please consider citing:
         </p>
-<pre><code class="plaintext">@article{doe2048agi,
-    title={Artificial General Intelligence},
-    author={Doe John},
-    journal={nature},
-    year={2048}
+<pre><code class="plaintext">{
 }</code></pre>
     </div>
 
@@ -237,13 +322,11 @@
             <p>
                 This website is built on the <a href="https://shikun.io/projects/clarity">Clarity Template</a>, designed by <a href="https://shikun.io/">Shikun Liu</a>.
             </p>
-        </div>    
+        </div>
     </footer>
-    
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="clarity/clarity.js"></script>    
-    <script src="assets/scripts/main.js"></script>    
-    </html>
+    <script src="assets/scripts/main.js"></script>
 </body>
+</html>
