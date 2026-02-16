@@ -1032,7 +1032,7 @@ table tbody tr:nth-child(2n+1) {
   background-color: #ececec;
 }
 table tbody tr:first-child {
-  border-top: solid 2px white;
+  border-top: solid 2px #c6c6c6;
 }
 table tbody tr:last-child {
   border-bottom: solid 2px white;

@@ -1032,7 +1032,7 @@ table tbody tr:nth-child(2n+1) {
   background-color: #ececec;
 }
 table tbody tr:first-child {
-  border-top: solid 2px white;
+  border-top: solid 2px #c6c6c6;
 }
 table tbody tr:last-child {
   border-bottom: solid 2px white;
@@ -1551,6 +1551,13 @@ iframe, video {
   margin-bottom: 1vh;
 }
 
+.wide_video {
+  width: 70%;
+  aspect-ratio: 16/6;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
 .video-intro {
   display: block;
   width: 70%;
@@ -1862,6 +1869,140 @@ div.container.blog#first-content div.blog-title .blog-intro {
 .container.blog.extra-large img {
   background-color: white;
   padding: 10px;
+}
+
+/* Section divider - horizontal line with extra spacing */
+/* Container holding the divider gets vertical padding */
+.container.blog.main:has(hr.section-divider) {
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+}
+
+hr.section-divider {
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  margin: 0;
+  width: 100%;
+}
+
+/* Table styling following Clarity template */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  margin: 3vh 0;
+}
+
+.results-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+.results-table thead {
+  background-color: transparent;
+}
+.results-table thead th {
+  padding: 12px 10px;
+  text-align: center;
+  font-weight: 600;
+  border: 1px solid #ececec;
+  font-size: 14px;
+  vertical-align: middle;
+}
+.results-table thead th:first-child {
+  text-align: left;
+  border-left: none;
+}
+.results-table thead th:last-child {
+  border-right: none;
+}
+.results-table thead tr:first-child th {
+  font-size: 15px;
+  padding: 14px 10px;
+  border-top: none;
+}
+.results-table thead tr:last-child th {
+  border-bottom: 1px solid #ececec;
+}
+.results-table tbody tr:first-child td {
+  border-top: 1px solid #ececec;
+}
+.results-table tbody tr:last-child {
+  border-bottom: none;
+}
+.results-table tbody tr.gradient-dark {
+  background-color: #f8edd8;
+}
+.results-table tbody tr.gradient-medium {
+  background-color: #fdf9f1;
+}
+.results-table tbody tr.gradient-light {
+  background-color: #ffffff;
+}
+.results-table tbody tr.separator-row {
+  background-color: transparent !important;
+  height: 1px;
+  border-bottom: 1.5px solid #c6c6c6;
+}
+.results-table tbody tr.separator-row td {
+  padding: 0;
+  border: none;
+}
+.results-table tbody tr td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ececec;
+  font-size: 14px;
+}
+.results-table tbody tr td:first-child {
+  text-align: left;
+  font-weight: 500;
+  border-left: none;
+}
+.results-table tbody tr td:last-child {
+  border-right: none;
+}
+.results-table tbody tr td strong {
+  font-weight: 700;
+}
+.results-table tbody tr td em {
+  font-style: italic;
+}
+.results-table tbody tr.highlight-row td {
+  font-weight: 800;
+}
+.results-table tbody tr.comparison-row td {
+  font-size: 14px;
+}
+.results-table tbody tr.comparison-row td.improvement {
+  color: #2d7d2d;
+}
+.results-table tbody tr:last-child td {
+  border-bottom: none;
+}
+.results-table tbody tr:last-child td:first-child {
+  border-bottom-left-radius: 12px;
+}
+.results-table tbody tr:last-child td:last-child {
+  border-bottom-right-radius: 12px;
+}
+.results-table thead th em {
+  font-style: italic;
+  font-weight: 600;
+}
+
+/* Responsive table styling */
+@media screen and (max-width: 769px) {
+  .results-table {
+    font-size: 13px;
+  }
+  .results-table thead th {
+    padding: 8px 6px;
+    font-size: 13px;
+  }
+  .results-table tbody td {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
 }
 
 /*# sourceMappingURL=main_free.css.map */
