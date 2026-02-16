@@ -1,29 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@300;400;500;600;700;800;900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@font-face {
-  font-family: "Charter";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Charter/charter_regular.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Charter";
-  font-style: italic;
-  font-weight: normal;
-  src: url("../fonts/Charter/charter_italic.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Charter";
-  font-style: normal;
-  font-weight: bold;
-  src: url("../fonts/Charter/charter_bold.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Charter";
-  font-style: italic;
-  font-weight: bold;
-  src: url("../fonts/Charter/charter_bold_italic.woff2") format("woff2");
-}
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
   margin: 0;
   padding: 0;
@@ -138,7 +114,7 @@ svg {
   }
   h1.title {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 26px;
   }
   h2 {
     line-height: 1.2;
@@ -170,7 +146,7 @@ svg {
   h1.title {
     padding: 0 0 1vh;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 26px;
   }
   h2 {
     line-height: 1.2;
@@ -202,7 +178,7 @@ svg {
   h1.title {
     padding: 0 0 1vh;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 26px;
   }
   h2 {
     line-height: 1.2;
@@ -226,7 +202,7 @@ svg {
     font-size: 15px;
   }
   h1 {
-    font-size: 29px;
+    font-size: 32px;
     line-height: 1.2;
     padding: 1vh 0;
     font-weight: 700;
@@ -234,7 +210,7 @@ svg {
   h1.title {
     padding: 0 0 1vh;
     font-weight: 500;
-    font-size: 29px;
+    font-size: 32px;
   }
   h2 {
     line-height: 1.2;
@@ -258,7 +234,7 @@ svg {
     font-size: 18px;
   }
   h1 {
-    font-size: 29px;
+    font-size: 32px;
     line-height: 1.2;
     padding: 1.75vh 0;
     font-weight: 700;
@@ -290,7 +266,7 @@ svg {
     font-size: 18px;
   }
   h1 {
-    font-size: 29px;
+    font-size: 32px;
     line-height: 1.2;
     padding: 1.75vh 0;
     font-weight: 700;
@@ -322,7 +298,7 @@ svg {
     font-size: 20px;
   }
   h1 {
-    font-size: 29px;
+    font-size: 32px;
     line-height: 1.2;
     padding: 1.75vh 0;
     font-weight: 700;
@@ -672,13 +648,13 @@ div.container.blog.gray-linear p.caption {
     display: none;
   }
   div.container.blog.large {
-    padding: 1.5vh 15vw;
+    padding: 1.5vh 10.2vw;
   }
   div.container.blog.extra-large {
-    padding: 1.5vh 8.5vw;
+    padding: 1.5vh 10.2vw;
   }
   div.container.blog.extra-extra-large {
-    padding: 1.5vh 8.5vw;
+    padding: 1.5vh 10.2vw;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -710,7 +686,7 @@ div.container.blog.gray-linear p.caption {
     margin-top: 4vh;
   }
   div.container.blog.main {
-    padding: 2vh 12vw;
+    padding: 2vh 12.75vw;
   }
   div.container.blog.main.comment {
     padding-left: 24vw;
@@ -722,13 +698,13 @@ div.container.blog.gray-linear p.caption {
     display: block;
   }
   div.container.blog.large {
-    padding: 2vh 16vw;
+    padding: 2vh 12.75vw;
   }
   div.container.blog.extra-large {
-    padding: 2vh 12vw;
+    padding: 2vh 12.75vw;
   }
   div.container.blog.extra-extra-large {
-    padding: 2vh 12vw;
+    padding: 2vh 12.75vw;
   }
 }
 @media screen and (min-width: 1600px) {
@@ -759,7 +735,7 @@ div.container.blog.gray-linear p.caption {
     margin-top: 5vh;
   }
   div.container.blog.main {
-    padding: 2vh 13.5vw;
+    padding: 2vh 15.3vw;
   }
   div.container.blog.main.comment {
     padding-left: 27vw;
@@ -768,13 +744,13 @@ div.container.blog.gray-linear p.caption {
     grid-template-columns: 50vw 23vw;
   }
   div.container.blog.large {
-    padding: 2vh 22vw;
+    padding: 2vh 15.3vw;
   }
   div.container.blog.extra-large {
-    padding: 2vh 18vw;
+    padding: 2vh 15.3vw;
   }
   div.container.blog.extra-extra-large {
-    padding: 2vh 14vw;
+    padding: 2vh 15.3vw;
   }
 }
 @media screen and (min-width: 2000px) {
@@ -805,7 +781,7 @@ div.container.blog.gray-linear p.caption {
     margin-top: 5vh;
   }
   div.container.blog.main {
-    padding: 2vh 15vw;
+    padding: 2vh 18.7vw;
   }
   div.container.blog.main.comment {
     padding-left: 30vw;
@@ -851,7 +827,7 @@ div.container.blog.gray-linear p.caption {
     margin-top: 5vh;
   }
   div.container.blog.main {
-    padding: 2vh 16vw;
+    padding: 2vh 20.4vw;
   }
   div.container.blog.main.comment {
     padding-left: 32vw;
@@ -872,7 +848,7 @@ div.container.blog.gray-linear p.caption {
 @media screen and (min-width: 3200px) {
   div.container.blog#first-content {
     padding-right: calc(27.2vw - (100vw - 100%));
-    padding-left: 23.8vw;
+    padding-left: 27.2vw;
   }
   div.container.blog#first-content div.blog-title {
     grid-template-columns: 1fr 1fr;
@@ -897,7 +873,7 @@ div.container.blog.gray-linear p.caption {
     margin-top: 5vh;
   }
   div.container.blog.main {
-    padding: 2vh 19vw;
+    padding: 2vh 23.8vw;
   }
   div.container.blog.main.comment {
     padding-left: 38vw;

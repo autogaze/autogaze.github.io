@@ -1,13 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-/* Box sizing reset for consistent rendering across browsers */
-*, *::before, *::after {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
   margin: 0;
   padding: 0;
@@ -33,7 +25,7 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
   line-height: 1.6;
   font-weight: 300;
   font-size: 18px;
-  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Figtree", serif;
 }
 
 a {
@@ -122,7 +114,7 @@ svg {
   }
   h1.title {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 26px;
   }
   h2 {
     line-height: 1.2;
@@ -154,7 +146,7 @@ svg {
   h1.title {
     padding: 0 0 1vh;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 26px;
   }
   h2 {
     line-height: 1.2;
@@ -186,7 +178,7 @@ svg {
   h1.title {
     padding: 0 0 1vh;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 26px;
   }
   h2 {
     line-height: 1.2;
@@ -210,7 +202,7 @@ svg {
     font-size: 15px;
   }
   h1 {
-    font-size: 29px;
+    font-size: 32px;
     line-height: 1.2;
     padding: 1vh 0;
     font-weight: 700;
@@ -218,7 +210,7 @@ svg {
   h1.title {
     padding: 0 0 1vh;
     font-weight: 500;
-    font-size: 29px;
+    font-size: 32px;
   }
   h2 {
     line-height: 1.2;
@@ -242,7 +234,7 @@ svg {
     font-size: 18px;
   }
   h1 {
-    font-size: 29px;
+    font-size: 32px;
     line-height: 1.2;
     padding: 1.75vh 0;
     font-weight: 700;
@@ -274,7 +266,7 @@ svg {
     font-size: 18px;
   }
   h1 {
-    font-size: 29px;
+    font-size: 32px;
     line-height: 1.2;
     padding: 1.75vh 0;
     font-weight: 700;
@@ -306,7 +298,7 @@ svg {
     font-size: 20px;
   }
   h1 {
-    font-size: 29px;
+    font-size: 32px;
     line-height: 1.2;
     padding: 1.75vh 0;
     font-weight: 700;
@@ -409,7 +401,7 @@ div.container.blog#first-content div.blog-title .blog-intro p.author a:hover {
   color: #7BAA86;
 }
 div.container.blog#first-content div.blog-title .blog-intro p.abstract {
-  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Figtree";
   font-weight: 300;
   padding: 1vh 0;
 }
@@ -442,7 +434,7 @@ div.container.blog#first-content div.blog-title .blog-cover img.background {
 
 div.container.blog p.text {
   padding: 1.5vh 0;
-  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Figtree", sans-serif;
 }
 div.container.blog p.text:last-child {
   padding-bottom: 0;
@@ -656,13 +648,13 @@ div.container.blog.gray-linear p.caption {
     display: none;
   }
   div.container.blog.large {
-    padding: 1.5vh 15vw;
+    padding: 1.5vh 10.2vw;
   }
   div.container.blog.extra-large {
-    padding: 1.5vh 8.5vw;
+    padding: 1.5vh 10.2vw;
   }
   div.container.blog.extra-extra-large {
-    padding: 1.5vh 8.5vw;
+    padding: 1.5vh 10.2vw;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -694,7 +686,7 @@ div.container.blog.gray-linear p.caption {
     margin-top: 4vh;
   }
   div.container.blog.main {
-    padding: 2vh 12vw;
+    padding: 2vh 12.75vw;
   }
   div.container.blog.main.comment {
     padding-left: 24vw;
@@ -706,13 +698,13 @@ div.container.blog.gray-linear p.caption {
     display: block;
   }
   div.container.blog.large {
-    padding: 2vh 16vw;
+    padding: 2vh 12.75vw;
   }
   div.container.blog.extra-large {
-    padding: 2vh 12vw;
+    padding: 2vh 12.75vw;
   }
   div.container.blog.extra-extra-large {
-    padding: 2vh 12vw;
+    padding: 2vh 12.75vw;
   }
 }
 @media screen and (min-width: 1600px) {
@@ -743,7 +735,7 @@ div.container.blog.gray-linear p.caption {
     margin-top: 5vh;
   }
   div.container.blog.main {
-    padding: 2vh 13.5vw;
+    padding: 2vh 15.3vw;
   }
   div.container.blog.main.comment {
     padding-left: 27vw;
@@ -752,13 +744,13 @@ div.container.blog.gray-linear p.caption {
     grid-template-columns: 50vw 23vw;
   }
   div.container.blog.large {
-    padding: 2vh 22vw;
+    padding: 2vh 15.3vw;
   }
   div.container.blog.extra-large {
-    padding: 2vh 18vw;
+    padding: 2vh 15.3vw;
   }
   div.container.blog.extra-extra-large {
-    padding: 2vh 14vw;
+    padding: 2vh 15.3vw;
   }
 }
 @media screen and (min-width: 2000px) {
@@ -789,7 +781,7 @@ div.container.blog.gray-linear p.caption {
     margin-top: 5vh;
   }
   div.container.blog.main {
-    padding: 2vh 15vw;
+    padding: 2vh 18.7vw;
   }
   div.container.blog.main.comment {
     padding-left: 30vw;
@@ -835,7 +827,7 @@ div.container.blog.gray-linear p.caption {
     margin-top: 5vh;
   }
   div.container.blog.main {
-    padding: 2vh 16vw;
+    padding: 2vh 20.4vw;
   }
   div.container.blog.main.comment {
     padding-left: 32vw;
@@ -856,7 +848,7 @@ div.container.blog.gray-linear p.caption {
 @media screen and (min-width: 3200px) {
   div.container.blog#first-content {
     padding-right: calc(27.2vw - (100vw - 100%));
-    padding-left: 23.8vw;
+    padding-left: 27.2vw;
   }
   div.container.blog#first-content div.blog-title {
     grid-template-columns: 1fr 1fr;
@@ -881,7 +873,7 @@ div.container.blog.gray-linear p.caption {
     margin-top: 5vh;
   }
   div.container.blog.main {
-    padding: 2vh 19vw;
+    padding: 2vh 23.8vw;
   }
   div.container.blog.main.comment {
     padding-left: 38vw;
@@ -913,7 +905,7 @@ button, .button {
   justify-content: center;
   font-size: 0.7em;
   font-weight: 700;
-  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Figtree", sans-serif;
   letter-spacing: 0.075em;
   text-decoration: none;
   text-transform: uppercase;
@@ -1017,7 +1009,7 @@ button.project.white, .button.project.white {
 table {
   margin: 0.5vh 0;
   width: 100%;
-  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Figtree", sans-serif;
 }
 table a {
   font-size: inherit;
@@ -1185,7 +1177,7 @@ select:after {
 .before figcaption,
 .after figcaption {
   font-size: 90%;
-  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Figtree";
   background: transparent;
   color: #353535;
   padding: 8px;
@@ -1279,9 +1271,9 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
     font-weight: 600;
   }
   h1.title {
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 0px;
-    font-size: 24px;
+    font-size: 26px;
   }
   h2 {
     line-height: 1.2;
@@ -1312,9 +1304,9 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
   }
   h1.title {
     padding: 0 0 1vh;
-    font-weight: 400;
+    font-weight: 500;
     letter-spacing: 0px;
-    font-size: 24px;
+    font-size: 26px;
   }
   h2 {
     line-height: 1.2;
@@ -1344,7 +1336,7 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
   }
   h1.title {
     padding: 0 0 1vh;
-    font-size: 24px;
+    font-size: 26px;
   }
   h2 {
     padding: 1vh 0;
@@ -1364,13 +1356,13 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
     font-size: 18px;
   }
   h1 {
-    font-size: 24px;
+    font-size: 26px;
     line-height: 1.2;
     padding: 1vh 0;
   }
   h1.title {
     padding: 0 0 1vh;
-    font-size: 29px;
+    font-size: 32px;
   }
   h2 {
     padding: 1vh 0;
@@ -1390,7 +1382,7 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
     font-size: 20px;
   }
   h1 {
-    font-size: 29px;
+    font-size: 32px;
     line-height: 1.2;
     padding: 1.75vh 0;
   }
@@ -1416,7 +1408,7 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
     font-size: 20px;
   }
   h1 {
-    font-size: 29px;
+    font-size: 32px;
     line-height: 1.2;
     padding: 1.75vh 0;
   }
@@ -1442,7 +1434,7 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
     font-size: 23px;
   }
   h1 {
-    font-size: 29px;
+    font-size: 32px;
     line-height: 1.2;
     padding: 1.75vh 0;
   }
@@ -1466,15 +1458,15 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
   }
 }
 footer p {
-  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Figtree";
 }
 
 /* ======================== Blog ===================== */
 div.container.blog#first-content div.blog-title .blog-intro p.author {
   padding: 4px 0 10px;
-  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Figtree";
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.2;
   font-size: 85%;
 }
@@ -1484,11 +1476,11 @@ div.container.blog#first-content div.blog-title .blog-intro p.author a {
 div.container.blog#first-content div.blog-title .blog-intro p.author a:hover {
   color: #dbe3db;
 }
-div.container.blog#first-content div.blog-title .blog-intro p.abstract {
-  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+div.container.blog#first-content div.blog-title .blog-intro no p.abstract {
+  font-family: "Figtree";
   font-weight: 300;
   padding: 1vh 0;
-  font-size: 85%;
+  font-size: 90%;
   line-height: 1.6;
 }
 div.container.blog#first-content div.blog-title .blog-intro .info p {
@@ -1500,7 +1492,7 @@ div.container.blog#first-content div.blog-title .blog-intro .info p {
 
 div.container.blog p.text {
   padding: 1.5vh 0;
-  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Figtree", sans-serif;
 }
 div.container.blog p.text:last-child {
   padding-bottom: 0;
@@ -1628,6 +1620,248 @@ iframe, video {
 .columns-2 img {
   width: 100%;
   height: auto;
+}
+
+/* ======================== AutoGaze Page-Specific Styles ===================== */
+/* Box sizing reset for consistent rendering across browsers */
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* CSS Variables for gradient and link colors */
+:root {
+  --gradient-start: #f1e6d2;
+  --gradient-end: #ffffff;
+  --link-brown: #000000;
+  --link-brown-hover: #775223;
+}
+
+/* Apply same padding as title block to all containers */
+.container.blog.main,
+.container.blog.extra-large,
+.container.blog.gray {
+  padding-right: calc(5.1vw - (100vw - 100%));
+  padding-left: 5.1vw;
+}
+
+/* Match title block's max-width constraint - content inside containers */
+.container.blog.main > *,
+.container.blog.extra-large > *,
+.container.blog.gray > * {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 769px) {
+  .container.blog.main,
+  .container.blog.extra-large,
+  .container.blog.gray {
+    padding-right: calc(5.525vw - (100vw - 100%));
+    padding-left: 5.525vw;
+  }
+}
+@media screen and (min-width: 992px) {
+  .container.blog.main,
+  .container.blog.extra-large,
+  .container.blog.gray {
+    padding-right: calc(10.2vw - (100vw - 100%));
+    padding-left: 10.2vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container.blog.main,
+  .container.blog.extra-large,
+  .container.blog.gray {
+    padding-right: calc(12.75vw - (100vw - 100%));
+    padding-left: 12.75vw;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .container.blog.main,
+  .container.blog.extra-large,
+  .container.blog.gray {
+    padding-right: calc(15.3vw - (100vw - 100%));
+    padding-left: 15.3vw;
+  }
+}
+@media screen and (min-width: 2000px) {
+  .container.blog.main,
+  .container.blog.extra-large,
+  .container.blog.gray {
+    padding-right: calc(18.7vw - (100vw - 100%));
+    padding-left: 18.7vw;
+  }
+}
+@media screen and (min-width: 2400px) {
+  .container.blog.main,
+  .container.blog.extra-large,
+  .container.blog.gray {
+    padding-right: calc(20.4vw - (100vw - 100%));
+    padding-left: 20.4vw;
+  }
+}
+@media screen and (min-width: 3200px) {
+  .container.blog.main,
+  .container.blog.extra-large,
+  .container.blog.gray {
+    padding-right: calc(27.2vw - (100vw - 100%));
+    padding-left: 27.2vw;
+  }
+}
+/* Link colors using CSS variables */
+a {
+  color: var(--link-brown);
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 1px;
+  font-weight: 400;
+  transition: text-decoration-thickness 0.2s ease;
+}
+
+a:hover {
+  color: var(--link-brown-hover);
+  text-decoration-thickness: 1.5px;
+}
+
+/* Two-column title layout */
+div.container.blog#first-content div.blog-title {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+div.container.blog#first-content div.blog-title .blog-intro {
+  display: grid !important;
+  grid-template-columns: 40% 58%;
+  gap: 1%;
+  padding: 6vh 0 !important;
+  align-items: start;
+}
+
+#first-content .title-column {
+  padding-right: 2vw;
+}
+
+#first-content .abstract-column {
+  padding-left: 2vw;
+}
+
+#first-content .abstract-column p.abstract:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Add subtle horizontal line when stacked vertically */
+@media screen and (max-width: 768px) {
+  #first-content .abstract-column::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.15);
+    margin-bottom: 3vh;
+  }
+}
+#first-content h1.title {
+  font-size: 28px;
+  line-height: 1.3;
+  margin-bottom: 0;
+}
+
+#first-content p.author {
+  line-height: 1.6;
+  margin-bottom: 1.5vh;
+  font-size: 18px;
+}
+
+#first-content p.abstract {
+  line-height: 1.7;
+  margin-bottom: 2vh;
+}
+
+#first-content .info {
+  margin-top: 3vh;
+}
+
+/* Author list styling - using CSS Grid for responsive columns */
+#first-content .author-list {
+  display: inline-grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 0.4vh 3vw;
+  margin: 2vh 0;
+}
+
+#first-content .author-list .author-item {
+  font-size: 88%;
+  line-height: 2;
+  white-space: nowrap;
+  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+#first-content .author-list .author-item a {
+  font-weight: 300;
+  font-size: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 1px;
+  transition: text-decoration-thickness 0.2s ease;
+}
+
+#first-content .author-list .author-item a:hover {
+  text-decoration-thickness: 1.5px;
+}
+
+#first-content .author-list .author-item sup {
+  font-size: 0.75em;
+}
+
+/* Keep 2 columns even on very wide screens (max 2 columns) */
+@media screen and (min-width: 1800px) {
+  #first-content .author-list {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+/* When layout stacks vertically */
+@media screen and (max-width: 768px) {
+  div.container.blog#first-content div.blog-title .blog-intro {
+    grid-template-columns: 1fr !important;
+    gap: 4vh !important;
+  }
+  #first-content .title-column,
+  #first-content .abstract-column {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* On mobile with stacked layout, full width */
+  #first-content .author-table {
+    max-width: 100%;
+  }
+}
+/* Very small screens: reduce to 1 or 2 columns via CSS grid */
+@media screen and (max-width: 500px) {
+  #first-content .author-table {
+    display: block;
+  }
+  #first-content .author-table tbody,
+  #first-content .author-table tr {
+    display: block;
+  }
+  #first-content .author-table td {
+    display: inline-block;
+    width: 48%;
+    padding: 0.3vh 2% 0.3vh 0;
+    white-space: normal;
+  }
+}
+/* White background for all images */
+.container.blog.main img,
+.container.blog.gray img,
+.container.blog.extra-large img {
+  background-color: white;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=main_free.css.map */

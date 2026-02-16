@@ -752,15 +752,15 @@ div.container.blog {
         }
     
         &.large {
-            padding: 1.5vh 15vw;
+            padding: 1.5vh 10.2vw;
         }
     
         &.extra-large {
-            padding: 1.5vh 8.5vw;
+            padding: 1.5vh 10.2vw;
         }
 
         &.extra-extra-large {
-            padding: 1.5vh 8.5vw;
+            padding: 1.5vh 10.2vw;
         }
     }
 }
@@ -803,7 +803,7 @@ div.container.blog {
         }
     
         &.main {
-           padding: 2vh 12vw;
+           padding: 2vh 12.75vw;
 
            &.comment {
                 padding-left: 24vw;
@@ -818,15 +818,15 @@ div.container.blog {
         }
     
         &.large {
-            padding: 2vh 16vw;
+            padding: 2vh 12.75vw;
         }
     
         &.extra-large {
-            padding: 2vh 12vw;
+            padding: 2vh 12.75vw;
         }
 
         &.extra-extra-large {
-            padding: 2vh 12vw;
+            padding: 2vh 12.75vw;
         }
     }
 }
@@ -868,7 +868,7 @@ div.container.blog {
         }
 
         &.main {
-           padding: 2vh 13.5vw;
+           padding: 2vh 15.3vw;
 
            &.comment {
                padding-left: 27vw;
@@ -879,15 +879,15 @@ div.container.blog {
         }
     
         &.large {
-            padding: 2vh 22vw;
+            padding: 2vh 15.3vw;
         }
     
         &.extra-large {
-            padding: 2vh 18vw;
+            padding: 2vh 15.3vw;
         }
 
         &.extra-extra-large {
-            padding: 2vh 14vw;
+            padding: 2vh 15.3vw;
         }
     }
 }
@@ -930,7 +930,7 @@ div.container.blog {
         }
 
         &.main {
-           padding: 2vh 15vw;
+           padding: 2vh 18.7vw;
 
            &.comment {
                padding-left: 30vw;
@@ -992,7 +992,7 @@ div.container.blog {
         }
 
         &.main {
-           padding: 2vh 16vw;
+           padding: 2vh 20.4vw;
 
            &.comment {
                padding-left: 32vw;
@@ -1020,7 +1020,7 @@ div.container.blog {
 @media screen and (min-width: $super-super-large-device) {
     div.container.blog#first-content {
         padding-right: calc(27.2vw - (100vw - 100%));
-        padding-left: 23.8vw;
+        padding-left: 27.2vw;
         div.blog-title {
             grid-template-columns: 1fr 1fr;
             column-gap: 7vw;
@@ -1053,7 +1053,7 @@ div.container.blog {
         }
 
         &.main {
-           padding: 2vh 19vw;
+           padding: 2vh 23.8vw;
 
            &.comment {
                padding-left: 38vw;

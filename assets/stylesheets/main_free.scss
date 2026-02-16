@@ -14,7 +14,7 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
         padding: 1.5vh 0;
         font-weight: 600;
         &.title {
-            font-weight: 400;
+            font-weight: 500;
             letter-spacing: 0px;
             font-size: $extra-large-font-size;
         }
@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
 
         &.title {
             padding: 0 0 1vh;
-            font-weight: 400;
+            font-weight: 500;
             letter-spacing: 0px;
             font-size: $extra-large-font-size;
         }
@@ -238,7 +238,7 @@ div.container.blog#first-content {
                 padding: 4px 0 10px;
                 font-family: $default-sans;
                 font-style: italic;
-                font-weight: 400;
+                font-weight: 500;
                 line-height: 1.2;
                 font-size: 85%;
 
@@ -250,12 +250,12 @@ div.container.blog#first-content {
                     }
                 }
             }
-        
+    no
             p.abstract {
                 font-family: $default-sans;
                 font-weight: 300;
                 padding: 1vh 0;
-                font-size: 85%;
+                font-size: 90%;
                 line-height: 1.6;
             }
         
@@ -430,4 +430,261 @@ iframe, video {
         width: 100%;
         height: auto;
     }
+}
+
+/* ======================== AutoGaze Page-Specific Styles ===================== */
+
+/* Box sizing reset for consistent rendering across browsers */
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* CSS Variables for gradient and link colors */
+:root {
+  --gradient-start: #f1e6d2;
+  --gradient-end: #ffffff;
+  --link-brown: #000000;
+  --link-brown-hover: #775223;
+}
+
+/* Apply same padding as title block to all containers */
+.container.blog.main,
+.container.blog.extra-large,
+.container.blog.gray {
+  padding-right: calc(5.1vw - (100vw - 100%));
+  padding-left: 5.1vw;
+}
+
+/* Match title block's max-width constraint - content inside containers */
+.container.blog.main > *,
+.container.blog.extra-large > *,
+.container.blog.gray > * {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: $small-device) {
+  .container.blog.main,
+  .container.blog.extra-large,
+  .container.blog.gray {
+    padding-right: calc(5.525vw - (100vw - 100%));
+    padding-left: 5.525vw;
+  }
+}
+
+@media screen and (min-width: $medium-device) {
+  .container.blog.main,
+  .container.blog.extra-large,
+  .container.blog.gray {
+    padding-right: calc(10.2vw - (100vw - 100%));
+    padding-left: 10.2vw;
+  }
+}
+
+@media screen and (min-width: $large-device) {
+  .container.blog.main,
+  .container.blog.extra-large,
+  .container.blog.gray {
+    padding-right: calc(12.75vw - (100vw - 100%));
+    padding-left: 12.75vw;
+  }
+}
+
+@media screen and (min-width: $extra-large-device) {
+  .container.blog.main,
+  .container.blog.extra-large,
+  .container.blog.gray {
+    padding-right: calc(15.3vw - (100vw - 100%));
+    padding-left: 15.3vw;
+  }
+}
+
+@media screen and (min-width: $extra-extra-large-device) {
+  .container.blog.main,
+  .container.blog.extra-large,
+  .container.blog.gray {
+    padding-right: calc(18.7vw - (100vw - 100%));
+    padding-left: 18.7vw;
+  }
+}
+
+@media screen and (min-width: $super-large-device) {
+  .container.blog.main,
+  .container.blog.extra-large,
+  .container.blog.gray {
+    padding-right: calc(20.4vw - (100vw - 100%));
+    padding-left: 20.4vw;
+  }
+}
+
+@media screen and (min-width: $super-super-large-device) {
+  .container.blog.main,
+  .container.blog.extra-large,
+  .container.blog.gray {
+    padding-right: calc(27.2vw - (100vw - 100%));
+    padding-left: 27.2vw;
+  }
+}
+
+/* Link colors using CSS variables */
+a {
+  color: var(--link-brown);
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 1px;
+  font-weight: 400;
+  transition: text-decoration-thickness 0.2s ease;
+}
+a:hover {
+  color: var(--link-brown-hover);
+  text-decoration-thickness: 1.5px;
+}
+
+/* Two-column title layout */
+div.container.blog#first-content div.blog-title {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+div.container.blog#first-content div.blog-title .blog-intro {
+  display: grid !important;
+  grid-template-columns: 40% 58%;
+  gap: 1%;
+  padding: 6vh 0 !important;
+  align-items: start;
+}
+
+#first-content .title-column {
+  padding-right: 2vw;
+}
+
+#first-content .abstract-column {
+  padding-left: 2vw;
+}
+
+#first-content .abstract-column p.abstract:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Add subtle horizontal line when stacked vertically */
+@media screen and (max-width: 768px) {
+  #first-content .abstract-column::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.15);
+    margin-bottom: 3vh;
+  }
+}
+
+#first-content h1.title {
+  font-size: 28px;
+  line-height: 1.3;
+  margin-bottom: 0;
+}
+
+#first-content p.author {
+  line-height: 1.6;
+  margin-bottom: 1.5vh;
+  font-size: 18px;
+}
+
+#first-content p.abstract {
+  line-height: 1.7;
+  margin-bottom: 2vh;
+}
+
+#first-content .info {
+  margin-top: 3vh;
+}
+
+/* Author list styling - using CSS Grid for responsive columns */
+#first-content .author-list {
+  display: inline-grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 0.4vh 3vw;
+  margin: 2vh 0;
+}
+
+#first-content .author-list .author-item {
+  font-size: calc(88%);
+  line-height: 2.0;
+  white-space: nowrap;
+  font-family: $default-sans, $font-fallback;
+}
+
+#first-content .author-list .author-item a {
+  font-weight: 300;
+  font-size: inherit;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5px;
+  text-underline-offset: 1px;
+  transition: text-decoration-thickness 0.2s ease;
+}
+
+#first-content .author-list .author-item a:hover {
+  text-decoration-thickness: 1.5px;
+}
+
+#first-content .author-list .author-item sup {
+  font-size: 0.75em;
+}
+
+/* Keep 2 columns even on very wide screens (max 2 columns) */
+@media screen and (min-width: 1800px) {
+  #first-content .author-list {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+/* When layout stacks vertically */
+@media screen and (max-width: 768px) {
+  div.container.blog#first-content div.blog-title .blog-intro {
+    grid-template-columns: 1fr !important;
+    gap: 4vh !important;
+  }
+
+  #first-content .title-column,
+  #first-content .abstract-column {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* On mobile with stacked layout, full width */
+  #first-content .author-table {
+    max-width: 100%;
+  }
+}
+
+/* Very small screens: reduce to 1 or 2 columns via CSS grid */
+@media screen and (max-width: 500px) {
+  #first-content .author-table {
+    display: block;
+  }
+
+  #first-content .author-table tbody,
+  #first-content .author-table tr {
+    display: block;
+  }
+
+  #first-content .author-table td {
+    display: inline-block;
+    width: 48%;
+    padding: 0.3vh 2% 0.3vh 0;
+    white-space: normal;
+  }
+}
+
+/* White background for all images */
+.container.blog.main img,
+.container.blog.gray img,
+.container.blog.extra-large img {
+  background-color: white;
+  padding: 10px;
 }
