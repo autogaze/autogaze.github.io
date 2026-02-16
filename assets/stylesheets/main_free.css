@@ -1,29 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@300;400;500;600;700;800;900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@font-face {
-  font-family: "Charter";
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/Charter/charter_regular.woff2") format("woff2");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Box sizing reset for consistent rendering across browsers */
+*, *::before, *::after {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-@font-face {
-  font-family: "Charter";
-  font-style: italic;
-  font-weight: normal;
-  src: url("../fonts/Charter/charter_italic.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Charter";
-  font-style: normal;
-  font-weight: bold;
-  src: url("../fonts/Charter/charter_bold.woff2") format("woff2");
-}
-@font-face {
-  font-family: "Charter";
-  font-style: italic;
-  font-weight: bold;
-  src: url("../fonts/Charter/charter_bold_italic.woff2") format("woff2");
-}
+
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, p, pre, q, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
   margin: 0;
   padding: 0;
@@ -49,7 +33,7 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
   line-height: 1.6;
   font-weight: 300;
   font-size: 18px;
-  font-family: "Figtree", serif;
+  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 a {
@@ -425,7 +409,7 @@ div.container.blog#first-content div.blog-title .blog-intro p.author a:hover {
   color: #7BAA86;
 }
 div.container.blog#first-content div.blog-title .blog-intro p.abstract {
-  font-family: "Figtree";
+  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
   padding: 1vh 0;
 }
@@ -458,7 +442,7 @@ div.container.blog#first-content div.blog-title .blog-cover img.background {
 
 div.container.blog p.text {
   padding: 1.5vh 0;
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 div.container.blog p.text:last-child {
   padding-bottom: 0;
@@ -929,7 +913,7 @@ button, .button {
   justify-content: center;
   font-size: 0.7em;
   font-weight: 700;
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   letter-spacing: 0.075em;
   text-decoration: none;
   text-transform: uppercase;
@@ -1033,7 +1017,7 @@ button.project.white, .button.project.white {
 table {
   margin: 0.5vh 0;
   width: 100%;
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 table a {
   font-size: inherit;
@@ -1201,7 +1185,7 @@ select:after {
 .before figcaption,
 .after figcaption {
   font-size: 90%;
-  font-family: "Figtree";
+  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   background: transparent;
   color: #353535;
   padding: 8px;
@@ -1482,13 +1466,13 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
   }
 }
 footer p {
-  font-family: "Figtree";
+  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 
 /* ======================== Blog ===================== */
 div.container.blog#first-content div.blog-title .blog-intro p.author {
   padding: 4px 0 10px;
-  font-family: "Figtree";
+  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-style: italic;
   font-weight: 400;
   line-height: 1.2;
@@ -1501,7 +1485,7 @@ div.container.blog#first-content div.blog-title .blog-intro p.author a:hover {
   color: #dbe3db;
 }
 div.container.blog#first-content div.blog-title .blog-intro p.abstract {
-  font-family: "Figtree";
+  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
   padding: 1vh 0;
   font-size: 85%;
@@ -1516,7 +1500,7 @@ div.container.blog#first-content div.blog-title .blog-intro .info p {
 
 div.container.blog p.text {
   padding: 1.5vh 0;
-  font-family: "Figtree", sans-serif;
+  font-family: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
 }
 div.container.blog p.text:last-child {
   padding-bottom: 0;
