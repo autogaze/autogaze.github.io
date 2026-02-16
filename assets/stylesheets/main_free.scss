@@ -240,7 +240,7 @@ div.container.blog#first-content {
                 font-style: italic;
                 font-weight: 400;
                 line-height: 1.2;
-                font-size: 75%;
+                font-size: 85%;
 
                 a {
                     transition: color 0.2s ease;
@@ -361,7 +361,7 @@ iframe, video {
 /* Two-column figure layout */
 .two-column-figure {
     display: grid;
-    grid-template-columns: 35% 65%;
+    grid-template-columns: 45% 55%;
     gap: 3vw;
     align-items: start;
 

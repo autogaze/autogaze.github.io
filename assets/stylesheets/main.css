@@ -128,10 +128,10 @@ svg {
 
 @media screen and (max-width: 769px) {
   a, p, td, th, tr, code, pre, ol, ul, li, div {
-    font-size: 15px;
+    font-size: 13px;
   }
   h1 {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1.2;
     padding: 1.5vh 0;
     font-weight: 700;
@@ -150,7 +150,7 @@ svg {
     font-weight: 700;
     line-height: 1.2;
     padding: 1.5vh 0;
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 @media screen and (min-width: 769px) {
@@ -159,10 +159,10 @@ svg {
     padding-left: 6.5vw;
   }
   a, p, td, th, tr, code, pre, ol, ul, li, div {
-    font-size: 16px;
+    font-size: 14px;
   }
   h1 {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1.2;
     padding: 2vh 0;
     font-weight: 700;
@@ -182,7 +182,7 @@ svg {
     font-weight: 700;
     line-height: 1.2;
     padding: 2vh 0;
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 @media screen and (min-width: 992px) {
@@ -191,10 +191,10 @@ svg {
     padding-left: 12vw;
   }
   a, p, td, th, tr, code, pre, ol, ul, li, div {
-    font-size: 16px;
+    font-size: 14px;
   }
   h1 {
-    font-size: 24px;
+    font-size: 22px;
     line-height: 1.2;
     padding: 1vh 0;
     font-weight: 700;
@@ -214,7 +214,7 @@ svg {
     font-weight: 700;
     line-height: 1.2;
     padding: 1vh 0;
-    font-size: 17px;
+    font-size: 15px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -223,10 +223,10 @@ svg {
     padding-left: 15vw;
   }
   a, p, td, th, tr, code, pre, ol, ul, li, div {
-    font-size: 17px;
+    font-size: 15px;
   }
   h1 {
-    font-size: 30px;
+    font-size: 29px;
     line-height: 1.2;
     padding: 1vh 0;
     font-weight: 700;
@@ -234,13 +234,13 @@ svg {
   h1.title {
     padding: 0 0 1vh;
     font-weight: 500;
-    font-size: 30px;
+    font-size: 29px;
   }
   h2 {
     line-height: 1.2;
     padding: 1vh 0;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 22px;
   }
   h3 {
     font-weight: 700;
@@ -258,7 +258,7 @@ svg {
     font-size: 18px;
   }
   h1 {
-    font-size: 30px;
+    font-size: 29px;
     line-height: 1.2;
     padding: 1.75vh 0;
     font-weight: 700;
@@ -266,13 +266,13 @@ svg {
   h1.title {
     padding: 0 0 1vh;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 35px;
   }
   h2 {
     line-height: 1.2;
     padding: 1.5vh 0;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 22px;
   }
   h3 {
     font-weight: 700;
@@ -290,7 +290,7 @@ svg {
     font-size: 18px;
   }
   h1 {
-    font-size: 30px;
+    font-size: 29px;
     line-height: 1.2;
     padding: 1.75vh 0;
     font-weight: 700;
@@ -298,13 +298,13 @@ svg {
   h1.title {
     padding: 0 0 1vh;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 35px;
   }
   h2 {
     line-height: 1.2;
     padding: 1.5vh 0;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 22px;
   }
   h3 {
     font-weight: 700;
@@ -322,7 +322,7 @@ svg {
     font-size: 20px;
   }
   h1 {
-    font-size: 30px;
+    font-size: 29px;
     line-height: 1.2;
     padding: 1.75vh 0;
     font-weight: 700;
@@ -330,13 +330,13 @@ svg {
   h1.title {
     padding: 0 0 1vh;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 35px;
   }
   h2 {
     line-height: 1.2;
     padding: 1.5vh 0;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 22px;
   }
   h3 {
     font-weight: 700;
@@ -921,7 +921,7 @@ button, .button {
   background-color: #ececec;
   border-radius: 10px;
   padding: 0.75em 1em;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   color: #353535;
   cursor: pointer;
   display: inline-flex;
