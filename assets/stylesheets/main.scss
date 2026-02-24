@@ -91,8 +91,8 @@ svg {
 
 // selection styling
 .container{
-    padding-right: calc(6vw - (100vw - 100%));
-    padding-left: 6vw;
+    padding-right: calc(9vw - (100vw - 100%));
+    padding-left: 9vw;
     flex: 1;
 }
 
@@ -132,8 +132,8 @@ svg {
 
 @media screen and (min-width: $small-device) {
     .container {
-        padding-right: calc(6.5vw - (100vw - 100%));
-        padding-left: 6.5vw;
+        padding-right: calc(9.5vw - (100vw - 100%));
+        padding-left: 9.5vw;
     }
     a, p, td, th, tr, code, pre, ol, ul, li, div  {
         font-size: $small-font-size;
@@ -166,8 +166,8 @@ svg {
 
 @media screen and (min-width: $medium-device) {
     .container {
-        padding-right: calc(12vw - (100vw - 100%));
-        padding-left: 12vw;
+        padding-right: calc(15vw - (100vw - 100%));
+        padding-left: 15vw;
     }
     a, p, td, th, tr, code, pre, ol, ul, li, div  {
         font-size: $small-font-size;
@@ -201,8 +201,8 @@ svg {
 
 @media screen and (min-width: $large-device) {
     .container {
-        padding-right: calc(15vw - (100vw - 100%));
-        padding-left: 15vw;
+        padding-right: calc(18vw - (100vw - 100%));
+        padding-left: 18vw;
     }
     a, p, td, th, tr, code, pre, ol, ul, li, div {
         font-size: $small-medium-font-size;
@@ -236,8 +236,8 @@ svg {
 
 @media screen and (min-width: $extra-large-device) {
     .container {
-        padding-right: calc(18vw - (100vw - 100%));
-        padding-left: 18vw;
+        padding-right: calc(21vw - (100vw - 100%));
+        padding-left: 21vw;
     }
     a, p, td, th, tr, code, pre, ol, ul, li, div  {
         font-size: $medium-font-size;
@@ -271,8 +271,8 @@ svg {
 
 @media screen and (min-width: $extra-extra-large-device) {
     .container {
-        padding-right: calc(22vw - (100vw - 100%));
-        padding-left: 22vw;
+        padding-right: calc(25vw - (100vw - 100%));
+        padding-left: 25vw;
     }
     a, p, td, th, tr, code, pre, ol, ul, li, div  {
         font-size: $medium-font-size;
@@ -307,8 +307,8 @@ svg {
 
 @media screen and (min-width: $super-large-device) {
     .container {
-        padding-right: calc(24vw - (100vw - 100%));
-        padding-left: 24vw;
+        padding-right: calc(27vw - (100vw - 100%));
+        padding-left: 27vw;
     }
 
     a, p, td, th, tr, code, pre, ol, ul, li, div  {
@@ -343,8 +343,8 @@ svg {
 
 @media screen and (min-width: $super-super-large-device) {
     .container {
-        padding-right: calc(32vw - (100vw - 100%));
-        padding-left: 28vw;
+        padding-right: calc(35vw - (100vw - 100%));
+        padding-left: 31vw;
     }
 }
 
@@ -390,8 +390,8 @@ footer {
 div.container.blog#first-content {
     padding-top: 2vh;
     background-color: $gray-5;
-    padding-right: calc(5.1vw - (100vw - 100%));
-    padding-left: 5.1vw;
+    padding-right: calc(9.171vw - (100vw - 100%));
+    padding-left: 9.171vw;
     div.blog-title {
         display: grid;
         grid-template-columns: 1fr;
@@ -622,10 +622,10 @@ div.container.blog {
 @media screen and (min-width: $small-device) {
     div.container.blog#first-content {
         padding-top: 3vh;
-        padding-right: calc(5.525vw - (100vw - 100%));
-        padding-left: 5.525vw;
+        padding-right: calc(9.68525vw - (100vw - 100%));
+        padding-left: 9.68525vw;
         div.blog-title {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             column-gap: 2vw;
 
             .blog-cover{
@@ -673,10 +673,10 @@ div.container.blog {
         }
     
         &.main {
-           padding: 1vh 7.5vw;
+           padding: 1vh 9.68525vw;
 
             &.comment {
-                padding-left: 15vw;
+                padding-left: 18vw;
                 padding-right: 0vw;
                 display: grid;
                 grid-template-columns: 70vw 13vw;
@@ -688,15 +688,15 @@ div.container.blog {
         }
     
         &.large {
-            padding: 1vh 10vw;
+            padding: 1vh 13vw;
         }
-    
+
         &.extra-large {
-            padding: 1vh 8vw;
+            padding: 1vh 11vw;
         }
 
         &.extra-extra-large {
-            padding: 1vh 8vw;
+            padding: 1vh 11vw;
         }
     }
 }
@@ -705,10 +705,10 @@ div.container.blog {
 @media screen and (min-width: $medium-device) {
     div.container.blog#first-content {
         padding-top: 4vh;
-        padding-right: calc(10.2vw - (100vw - 100%));
-        padding-left: 10.2vw;
+        padding-right: calc(15.342vw - (100vw - 100%));
+        padding-left: 15.342vw;
         div.blog-title {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             column-gap: 3vw;
 
             .blog-intro {
@@ -738,10 +738,10 @@ div.container.blog {
         }
     
         &.main {
-           padding: 1.5vh 10vw;
+           padding: 1.5vh 15.342vw;
 
            &.comment {
-                padding-left: 20vw;
+                padding-left: 23vw;
                 padding-right: 0vw;
                 display: grid;
                 grid-template-columns: 60vw 18vw;
@@ -752,15 +752,15 @@ div.container.blog {
         }
     
         &.large {
-            padding: 1.5vh 10.2vw;
+            padding: 1.5vh 13.2vw;
         }
-    
+
         &.extra-large {
-            padding: 1.5vh 10.2vw;
+            padding: 1.5vh 13.2vw;
         }
 
         &.extra-extra-large {
-            padding: 1.5vh 10.2vw;
+            padding: 1.5vh 13.2vw;
         }
     }
 }
@@ -769,15 +769,15 @@ div.container.blog {
 @media screen and (min-width: $large-device) {
     div.container.blog#first-content {
         padding-top: 6vh;
-        padding-right: calc(12.75vw - (100vw - 100%));
-        padding-left: 12.75vw;
+        padding-right: calc(18.4275vw - (100vw - 100%));
+        padding-left: 18.4275vw;
         div.blog-title {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             column-gap: 4vw;
 
             .blog-intro {
                 padding: 5vh 0;
-    
+
                 p {
                     padding: 1.5vh 0;
                 }
@@ -803,10 +803,10 @@ div.container.blog {
         }
     
         &.main {
-           padding: 2vh 12.75vw;
+           padding: 2vh 18.4275vw;
 
            &.comment {
-                padding-left: 24vw;
+                padding-left: 27vw;
                 padding-right: 0vw;
                 display: grid;
                 grid-template-columns: 60vw 18vw;
@@ -816,17 +816,17 @@ div.container.blog {
                 }
             }
         }
-    
+
         &.large {
-            padding: 2vh 12.75vw;
+            padding: 2vh 18.4275vw;
         }
-    
+
         &.extra-large {
-            padding: 2vh 12.75vw;
+            padding: 2vh 18.4275vw;
         }
 
         &.extra-extra-large {
-            padding: 2vh 12.75vw;
+            padding: 2vh 18.4275vw;
         }
     }
 }
@@ -834,10 +834,10 @@ div.container.blog {
 
 @media screen and (min-width: $extra-large-device) {
     div.container.blog#first-content {
-        padding-right: calc(15.3vw - (100vw - 100%));
-        padding-left: 15.3vw;
+        padding-right: calc(21.513vw - (100vw - 100%));
+        padding-left: 21.513vw;
         div.blog-title {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             column-gap: 4vw;
 
             .blog-intro {
@@ -868,26 +868,26 @@ div.container.blog {
         }
 
         &.main {
-           padding: 2vh 15.3vw;
+           padding: 2vh 21.513vw;
 
            &.comment {
-               padding-left: 27vw;
+               padding-left: 30vw;
                padding-right: 0vw;
                display: grid;
                grid-template-columns: 50vw 23vw;
            }
         }
-    
+
         &.large {
-            padding: 2vh 15.3vw;
+            padding: 2vh 21.513vw;
         }
-    
+
         &.extra-large {
-            padding: 2vh 15.3vw;
+            padding: 2vh 21.513vw;
         }
 
         &.extra-extra-large {
-            padding: 2vh 15.3vw;
+            padding: 2vh 21.513vw;
         }
     }
 }
@@ -896,10 +896,10 @@ div.container.blog {
 
 @media screen and (min-width: $extra-extra-large-device) {
     div.container.blog#first-content {
-        padding-right: calc(18.7vw - (100vw - 100%));
-        padding-left: 18.7vw;
+        padding-right: calc(25.627vw - (100vw - 100%));
+        padding-left: 25.627vw;
         div.blog-title {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             column-gap: 5vw;
 
             .blog-intro {
@@ -930,26 +930,26 @@ div.container.blog {
         }
 
         &.main {
-           padding: 2vh 18.7vw;
+           padding: 2vh 25.627vw;
 
            &.comment {
-               padding-left: 30vw;
+               padding-left: 33vw;
                padding-right: 0vw;
                display: grid;
                grid-template-columns: 50vw 23vw;
            }
         }
-    
+
         &.large {
-            padding: 2vh 26vw;
+            padding: 2vh 25.627vw;
         }
-    
+
         &.extra-large {
-            padding: 2vh 22vw;
+            padding: 2vh 25.627vw;
         }
 
         &.extra-extra-large {
-            padding: 2vh 16vw;
+            padding: 2vh 25.627vw;
         }
     }
 }
@@ -958,10 +958,10 @@ div.container.blog {
 
 @media screen and (min-width: $super-large-device) {
     div.container.blog#first-content {
-        padding-right: calc(20.4vw - (100vw - 100%));
-        padding-left: 20.4vw;
+        padding-right: calc(27.684vw - (100vw - 100%));
+        padding-left: 27.684vw;
         div.blog-title {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             column-gap: 6vw;
 
             .blog-intro {
@@ -992,26 +992,26 @@ div.container.blog {
         }
 
         &.main {
-           padding: 2vh 20.4vw;
+           padding: 2vh 27.684vw;
 
            &.comment {
-               padding-left: 32vw;
+               padding-left: 35vw;
                padding-right: 0vw;
                display: grid;
                grid-template-columns: 50vw 23vw;
            }
         }
-    
+
         &.large {
-            padding: 2vh 28vw;
+            padding: 2vh 27.684vw;
         }
-    
+
         &.extra-large {
-            padding: 2vh 24vw;
+            padding: 2vh 27.684vw;
         }
 
         &.extra-extra-large {
-            padding: 2vh 18vw;
+            padding: 2vh 27.684vw;
         }
     }
 }
@@ -1019,10 +1019,10 @@ div.container.blog {
 
 @media screen and (min-width: $super-super-large-device) {
     div.container.blog#first-content {
-        padding-right: calc(27.2vw - (100vw - 100%));
-        padding-left: 27.2vw;
+        padding-right: calc(35.912vw - (100vw - 100%));
+        padding-left: 35.912vw;
         div.blog-title {
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr;
             column-gap: 7vw;
 
             .blog-intro {
@@ -1053,26 +1053,26 @@ div.container.blog {
         }
 
         &.main {
-           padding: 2vh 23.8vw;
+           padding: 2vh 35.912vw;
 
            &.comment {
-               padding-left: 38vw;
+               padding-left: 41vw;
                padding-right: 0vw;
                display: grid;
                grid-template-columns: 50vw 23vw;
            }
         }
-    
+
         &.large {
-            padding: 2vh 32vw;
+            padding: 2vh 35.912vw;
         }
-    
+
         &.extra-large {
-            padding: 2vh 28vw;
+            padding: 2vh 35.912vw;
         }
 
         &.extra-extra-large {
-            padding: 2vh 22vw;
+            padding: 2vh 35.912vw;
         }
     }
 }

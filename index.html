@@ -14,13 +14,15 @@
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:description" content="AutoGaze: Efficient and Scalable Video Understanding via Autoregressive Gazing">
-    <meta name="twitter:image:src" content="assets/figures/autogaze/teaser_v14.png">
+    <meta name="twitter:image:src" content="assets/figures/autogaze/teaser_v21.png">
 
     <link rel="stylesheet" type="text/css" media="all" href="assets/stylesheets/main_free.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/foundation.min.css">
     <link href="assets/fontawesome-free-6.6.0-web/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css"/>
     <script defer src="https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <script src="assets/scripts/navbar.js"></script>
     <script type="text/x-mathjax-config">
         MathJax.Hub.Config({
@@ -46,7 +48,7 @@
         <div class="blog-title">
             <div class="blog-intro">
                 <div class="title-column">
-                    <h1 class="title">Attend Before Attention: <br>Efficient and Scalable Video Understanding via Autoregressive Gazing</h1>
+                    <h1 class="title">Attend Before Attention: <br>Efficient and Scalable Video Understanding<br> via Autoregressive Gazing</h1>
 <!--                    <br>-->
                     <div class="author-list">
                         <div class="author-item"><a href="https://bfshi.github.io/" target="_blank">Baifeng Shi</a>*<sup>1,4</sup></div>
@@ -64,29 +66,31 @@
                         <div class="author-item"><a href="https://hongxu-yin.github.io/" target="_blank">Hongxu Yin</a><sup>†4</sup></div>
                     </div>
                     <br><br>
-                    <p class="author" style="padding-top: 0px;">
-                        <sup>1</sup>UC Berkeley &nbsp; <sup>2</sup>MIT &nbsp; <sup>3</sup>Clarifai &nbsp; <sup>4</sup>NVIDIA
-                    </p>
-                    <p class="author" style="padding-top: 0px; font-size: 14px;">
-                        <sup>*</sup>Equal contribution &nbsp;&nbsp; <sup>†</sup>Equal advising
-                    </p>
+                    <div class="author-meta">
+                        <p class="author">
+                            <sup>1</sup>UC Berkeley &nbsp; <sup>2</sup>MIT &nbsp; <sup>3</sup>Clarifai &nbsp; <sup>4</sup>NVIDIA
+                        </p>
+                        <p class="author">
+                            <sup>*</sup>Equal contribution &nbsp;&nbsp; <sup>†</sup>Equal advising
+                        </p>
+                    </div>
+                </div>
+                <div class="info">
+                    <div>
+                        <a href="#" class="button icon" style="background-color: rgba(0, 0, 0, 0.05)">Paper <i class="fa-solid fa-book-open"></i></a> &nbsp;&nbsp;
+                        <a href="#" class="button icon" style="background-color: rgba(0, 0, 0, 0.05)">Code <i class="fa-solid fa-code"></i></a>  &nbsp;&nbsp;
+                        <a href="https://huggingface.co/datasets/bfshi/HLVid" class="button icon" style="background-color: rgba(0, 0, 0, 0.05)" target="_blank">HLVid Benchmark <i class="fa-solid fa-database"></i></a> &nbsp;&nbsp;
+                        <a href="#" class="button icon" style="background-color: rgba(0, 0, 0, 0.05)">Demo <i class="fa-solid fa-laptop-code"></i></a>
+                    </div>
                 </div>
 
                 <div class="abstract-column">
                     <p class="abstract">
-                        <b>AutoGaze</b> is a lightweight module that removes redundant video patches before being processed downstream by a ViT or MLLM. Trained with next-token prediction and reinforcement learning, AutoGaze autoregressively <b>selects a minimal set of patches that reconstructs the video within some error threshold, eliminating redundancy while preserving information</b>. Empirically, AutoGaze reduces visual tokens by 4-100× and accelerates ViTs and MLLMs by up to 19×, enabling scaling MLLMs to 1K-frame 4K-resolution videos and achieving superior results on video benchmarks.
+                        <b>AutoGaze</b> is a lightweight module that removes redundant video patches before being processed downstream by a ViT or MLLM. Trained with next-token prediction and reinforcement learning, AutoGaze autoregressively <b>selects a minimal set of patches that reconstructs the video, eliminating redundancy while preserving information</b>. Empirically, AutoGaze reduces visual tokens by 4-100× and accelerates ViTs and MLLMs by up to 19×, enabling scaling MLLMs to 1K-frame 4K-resolution videos and achieving superior results on video benchmarks.
                     </p>
                     <p class="abstract">
-                        We also introduce <b>HLVid</b>: the first high-resolution, long-form video QA benchmark with multi-minute 4K videos. On HLVid, an MLLM scaled with AutoGaze outperforms the previous SOTA MLLM by 6.3%.
+                        We also introduce <b>HLVid: the first high-resolution, long-form video QA benchmark</b>. On HLVid, an MLLM scaled with AutoGaze outperforms the previous SOTA MLLM by 6.3%.
                     </p>
-                    <div class="info">
-                        <div>
-                            <a href="#" class="button icon" style="background-color: rgba(0, 0, 0, 0.05)">Paper <i class="fa-solid fa-book-open"></i></a> &nbsp;&nbsp;
-                            <a href="#" class="button icon" style="background-color: rgba(0, 0, 0, 0.05)">Code <i class="fa-solid fa-code"></i></a>  &nbsp;&nbsp;
-                            <a href="https://huggingface.co/datasets/bfshi/HLVid" class="button icon" style="background-color: rgba(0, 0, 0, 0.05)" target="_blank">HLVid Benchmark <i class="fa-solid fa-database"></i></a> &nbsp;&nbsp;
-                            <a href="#" class="button icon" style="background-color: rgba(0, 0, 0, 0.05)">Demo <i class="fa-solid fa-laptop-code"></i></a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -104,23 +108,22 @@
         </p>
         <br>
         <pre><code class="python">import torch
-from transformers import VivitImageProcessor
-from autogaze.models.autogaze import AutoGaze
+from autogaze.datasets.video_utils import transform_video_for_pytorch
+from autogaze.models.autogaze import AutoGazeImageProcessor, AutoGaze
 
+autogaze_transform = AutoGazeImageProcessor.from_pretrained("bfshi/AutoGaze")
 autogaze_model = AutoGaze.from_pretrained("bfshi/AutoGaze")
-autogaze_transform = VivitImageProcessor.from_pretrained("facebook/vit-mae-large",
-                                              size=autogaze_model.scales[-1],
-                                              crop_size=autogaze_model.scales[-1])
+
 # ...prepare video input...
+
+video_input_autogaze = transform_video_for_pytorch(raw_video, autogaze_transform)[None]
 
 with torch.inference_mode():
     gaze_outputs = autogaze_model({"video": video_input_autogaze},
-                      gazing_ratio=0.75,
-                      task_loss_requirement=0.7)</code></pre>
+                                  gazing_ratio=0.75,
+                                  task_loss_requirement=0.7)
+</code></pre>
         <br>
-        <pre><code class="python"># Use HLVid: 4K, long video benchmark
-from datasets import load_dataset
-ds = load_dataset("------")</code></pre>
     </div>
     <div class="container blog main first" id="blog-main">
         <h1>Introduction</h1>
@@ -132,16 +135,15 @@ ds = load_dataset("------")</code></pre>
             In contrast, modern video understanding models still process every pixel in every frame equally, <b>wasting computation due to spatiotemporal redundancy in videos</b>. Thus, these models cannot scale to <em>long-form</em> and <em>high-resolution</em> videos crucial for real-world applications due to computational cost.
         </p>
 
-        <p class="text">
-            We propose <b>AutoGaze, a lightweight model that attends to informative patches and removes redundant ones before passing into a ViT or MLLM</b>. AutoGaze perceives each frame and autoregressively selects a minimal set of multi-scale patches which, along with the selected patches from previous frames, can reconstruct the current frame.
+        <p class="text highlight-box">
+            <b>We propose AutoGaze, a lightweight model that attends to informative patches and removes redundant ones before passing into a ViT or MLLM</b>. AutoGaze perceives each frame and autoregressively selects a minimal set of multi-scale patches which, along with the selected patches from previous frames, can reconstruct the current frame.
         </p>
     </div>
     <div class="container blog main">
-        <img src="assets/figures/autogaze/teaser_v14.png" style="width: 100%;">
+        <img src="assets/figures/autogaze/teaser_v21.png" style="width: 100%;">
         <p class="caption">
             <b>Left: </b> Existing MLLMs either <span id="naive-mllm-label">process all pixels which is inefficient</span>, or <span id="prune-mllm-label">prune tokens only in their LLMs, leaving ViTs the computational bottleneck</span>. In contrast, <span id="autogaze-label">AutoGaze eliminates redundant patches by up to 100× <em>before</em> ViTs, accelerating ViTs and MLLMs by up to 19×</span>.
-        </p>
-        <p class="caption">
+            <br><br>
             <b>Right: </b> This efficiency enables MLLMs with AutoGaze to <b>scale to 1K-frame, 4K-resolution videos and achieve superior performance</b> on HLVid, our new long, high-resolution video benchmark, surpassing prior MLLMs limited to short or low-resolution videos.
         </p>
     </div>
@@ -151,23 +153,30 @@ ds = load_dataset("------")</code></pre>
     <div class="container blog main">
         <h1>Architecture and Training</h1>
         <p class="text">
-            Given an input video, AutoGaze selects a minimal set of patches (i.e., "gazing") which can reconstruct the video within some user-specified reconstruction loss threshold or patch budget.
-            The model is made up of a convolutional encoder and autoregressive transformer decoder, totaling 3M parameters. The decoder's vocabulary includes patches from four scales, letting the decoder select different scales for regions with different level of detail and reducing patches while preserving reconstruction quality.
+            Given an input video, <span class="inline-highlight" data-figure="arch-fig" data-regions="region-middle">AutoGaze selects a minimal set of patches which reconstructs the video</span> within some user-specified reconstruction loss threshold or patch budget.
+            The model is made up of a convolutional encoder and autoregressive transformer decoder, totaling 3M parameters. The decoder's vocabulary includes <span class="inline-highlight" data-figure="arch-fig" data-regions="region-left">patches from four scales</span>, letting it select different scales for regions with different levels of detail and reducing patches while preserving reconstruction quality.
         </p>
-    </div>
-    <div class="container blog main">
+<!--    <div class="container blog main">-->
 <!--        <h2>Training Pipeline</h2>-->
         <p class="text">
-            AutoGaze is trained in two stages: we first pre-train with next-token prediction (NTP) on ground-truth gazing sequences, then further post-train AutoGaze using RL with reconstruction reward to discover gazing sequences with lower reconstruction loss.
+            <span class="inline-highlight" data-figure="arch-fig" data-regions="region-right">AutoGaze is trained in two stages:</span> we first pre-train with next-token prediction (NTP) on ground-truth gazing sequences, then further post-train AutoGaze using RL with reconstruction reward to discover gazing sequences with lower reconstruction loss.
         </p>
         <br>
-        <img src="assets/figures/autogaze/architecture_v15.png" style="width: 100%;">
-        <p class="caption">
-            <b>Left & Middle: </b> Given a video, AutoGaze processes each frame and outputs indices of multi-scale patches based on the history of frames and selected patches. Once AutoGaze believes the previously-gazed patches are sufficient to reconstruct the current frame, it automatically stops gazing and moves to the next frame.
-        </p>
-        <p class="caption">
-        <b>Right: </b> AutoGaze is trained in two stages: next-token-prediction pre-training on collected gazing sequences, and RL post-training with reconstruction reward.
-        </p>
+        <div class="figure-wrapper" id="arch-fig">
+            <img src="assets/figures/autogaze/architecture_v15.png" style="width: 100%;">
+            <svg class="fig-dim-svg" xmlns="http://www.w3.org/2000/svg">
+                <rect class="region-border" data-region="region-left"   x="1%"   y="1%" width="22%"  height="98%" fill="transparent" stroke="#e1b76e" stroke-width="0" rx="12"/>
+                <rect class="region-border" data-region="region-middle" x="24%"  y="1%" width="58%"  height="98%" fill="transparent" stroke="#e1b76e" stroke-width="0" rx="12"/>
+                <rect class="region-border" data-region="region-right"  x="83%"  y="1%" width="17%"  height="98%" fill="transparent" stroke="#e1b76e" stroke-width="0" rx="12"/>
+            </svg>
+        </div>
+<!--        <p class="caption">-->
+<!--            <b>Left & Middle: </b> Given a video, AutoGaze processes each frame and outputs indices of multi-scale patches based on the history of frames and selected patches. Once AutoGaze believes the previously-gazed patches are sufficient to reconstruct the current frame, it automatically stops gazing and moves to the next frame.-->
+<!--        </p>-->
+<!--        <p class="caption">-->
+<!--        <b>Right: </b> AutoGaze is trained in two stages: next-token-prediction pre-training on collected gazing sequences, and RL post-training with reconstruction reward.-->
+<!--        </p>-->
+<!--    </div>-->
     </div>
     <div class="container blog main">
         <hr class="section-divider">
@@ -178,9 +187,20 @@ ds = load_dataset("------")</code></pre>
             For each example below, we show the original video, gazed patches from two scales, and reconstructed video.
         </p>
         <p class="text">
-            In general, AutoGaze can 1) focus on moving objects while removing redundancy in static regions <b>(a-e)</b>, 2) adapt to scene changes by selecting more patches <b>(c, e)</b>, and 3) distribute attention with different granularity based on detailedness <b>(c, f)</b>. This allows AutoGaze to select a small ratio of patches (gazing ratio) without much information loss, as reflected by the reconstruction quality.
+            In general, AutoGaze can <span class="inline-highlight" data-figure="results-fig" data-regions="panel-a,panel-b,panel-c,panel-d,panel-e">1) focus on moving objects while removing redundancy in static regions</span>, <span class="inline-highlight" data-figure="results-fig" data-regions="panel-c,panel-e">2) adapt to scene changes</span> by selecting more patches, and <span class="inline-highlight" data-figure="results-fig" data-regions="panel-c,panel-f">3) use different scales</span> based on level of detail. This allows AutoGaze to select a small ratio of patches (gazing ratio) without much information loss, as reflected by the reconstruction quality.
         </p>
-    <img src="assets/figures/autogaze/main_results.png" style="width: 100%;">
+        <br>
+    <div class="figure-wrapper" id="results-fig">
+        <img src="assets/figures/autogaze/main_results.png" style="width: 100%;">
+        <svg class="fig-dim-svg" xmlns="http://www.w3.org/2000/svg">
+            <rect class="region-border" data-region="panel-a" x="0.5%"    y="1%"   width="32.3%" height="48%"  fill="transparent" stroke="#e1b76e" stroke-width="0" rx="12"/>
+            <rect class="region-border" data-region="panel-b" x="33.8%"   y="1%"   width="32.3%" height="48%"  fill="transparent" stroke="#e1b76e" stroke-width="0" rx="12"/>
+            <rect class="region-border" data-region="panel-c" x="67.1%"   y="1%"   width="32.4%" height="48%"  fill="transparent" stroke="#e1b76e" stroke-width="0" rx="12"/>
+            <rect class="region-border" data-region="panel-d" x="0.5%"    y="51%"  width="32.3%" height="48%"  fill="transparent" stroke="#e1b76e" stroke-width="0" rx="12"/>
+            <rect class="region-border" data-region="panel-e" x="33.8%"   y="51%"  width="32.3%" height="48%"  fill="transparent" stroke="#e1b76e" stroke-width="0" rx="12"/>
+            <rect class="region-border" data-region="panel-f" x="67.1%"   y="51%"  width="32.4%" height="48%"  fill="transparent" stroke="#e1b76e" stroke-width="0" rx="12"/>
+        </svg>
+    </div>
     </div>
     <div class="container blog main">
         <hr class="section-divider">
@@ -228,17 +248,25 @@ ds = load_dataset("------")</code></pre>
     <div class="container blog main">
         <h1>Generalization to Out-of-Distribution Videos</h1>
         <p class="text">
-            AutoGaze successfully generalizes to unconventional scenarios including CCTV footage, robot videos, and videos with constantly swapping foreground objects. Across different style transfers, AutoGaze also maintains consistent gazing patterns, continuing to track changing regions.
+            AutoGaze successfully generalizes to unconventional scenarios including CCTV footage, robot videos, and videos with constantly swapping foreground objects.
         </p>
     </div>
-        <div class="container blog main">
-            <img src="assets/figures/autogaze/autogaze_ood_semantics.png" style="width: 100%;">
-        </div>
 
-        <div class="container blog main">
-            <img src="assets/figures/autogaze/autogaze_ood_style.png" style="width: 100%;">
+    <div class="container blog main">
+        <div class="ood-carousel-container">
+            <div class="ood-flickity">
+                <div class="carousel-cell">
+                    <img src="assets/figures/autogaze/autogaze_ood_semantics_1.png" alt="OOD Semantics - CCTV">
+                </div>
+                <div class="carousel-cell">
+                    <img src="assets/figures/autogaze/autogaze_ood_semantics_2.png" alt="OOD Semantics - Robot">
+                </div>
+                <div class="carousel-cell">
+                    <img src="assets/figures/autogaze/autogaze_ood_semantics_3.png" alt="OOD Semantics - Comparison">
+                </div>
+            </div>
         </div>
-
+    </div>
     <div class="container blog main">
         <hr class="section-divider">
     </div>
@@ -259,25 +287,31 @@ ds = load_dataset("------")</code></pre>
 
         <p class="text">
             There is a trade-off between gazing ratio and reconstruction loss: videos with higher FPS or resolution need lower gazing ratio to reach the same reconstruction quality.
-            We find that a reconstruction loss threshold of 0.7 usually leads to <b>less than 0.5% performance degradation across benchmarks while allowing videos to be represented with 4×-100× fewer patches</b>.
+            We find that a reconstruction loss threshold of 0.7 usually leads to <b><0.5% performance drop while allowing videos to be represented with 4×-100× fewer patches</b>.
         </p>
     </div>
 
     <div class="container blog main">
-        <img src="assets/figures/autogaze/loss_recon_cut.png" style="width: 70%">
+        <img src="assets/figures/autogaze/loss_recon_cut.png" style="width: 100%">
     </div>
 
     <div class="container blog main">
         <h2>What speedups do we get?</h2>
         <p class="text">
-            When using the gazing ratio required for a reconstruction loss of 0.7, AutoGaze achieves up to 19× and 10× speedup for ViTs and MLLMs respectively, enabling scaling to 4K resolution. See below for latency plots for ending one second of video with varying FPS and resolution.
+            When using the gazing ratio required for a reconstruction loss of 0.7, <b>AutoGaze achieves up to 19× and 10× speedup for ViTs and MLLMs, enabling scaling to 4K resolution</b>. Below, we show latency plots for one second of video with varying FPS and resolution.
         </p>
     </div>
 
     <div class="container blog main">
-        <div class="columns-2">
-            <img src="assets/figures/autogaze/latency_vision.png">
-            <img src="assets/figures/autogaze/latency_llm.png">
+        <div class="latency-carousel-container">
+            <div class="latency-flickity">
+                <div class="carousel-cell">
+                    <img src="assets/figures/autogaze/latency_vision.png" alt="Vision Latency">
+                </div>
+                <div class="carousel-cell">
+                    <img src="assets/figures/autogaze/latency_llm.png" alt="LLM Latency">
+                </div>
+            </div>
         </div>
     </div>
     <div class="container blog main">
@@ -291,9 +325,19 @@ ds = load_dataset("------")</code></pre>
         <p class="text">
             <a href="">Check out and use HLVid on HuggingFace!</a>
         </p>
+    </div>
 
-        <pre><code class="python">from datasets import load_dataset
-ds = load_dataset("bfshi/HLVid")</code></pre>
+    <div class="container blog main">
+        <div class="hlvid-carousel-container">
+            <div class="hlvid-flickity">
+                <div class="carousel-cell">
+                    <img src="assets/figures/autogaze/hlvid1.png" alt="HLVid Example 1">
+                </div>
+                <div class="carousel-cell">
+                    <img src="assets/figures/autogaze/hlvid2.png" alt="HLVid Example 2">
+                </div>
+            </div>
+        </div>
     </div>
     <div class="container blog main">
         <hr class="section-divider">
@@ -412,7 +456,7 @@ ds = load_dataset("bfshi/HLVid")</code></pre>
                         <td>58.0</td>
                         <td>-</td>
                         <td>-</td>
-                        <td>-</td>
+                        <td>42.2</td>
                     </tr>
                     <tr class="gradient-light">
                         <td>Apollo-7B</td>
@@ -495,8 +539,8 @@ ds = load_dataset("bfshi/HLVid")</code></pre>
                         <td>70.1</td>
                         <td>42.5</td>
                     </tr>
-                    <tr class="gradient-dark highlight-row">
-                        <td>NVILA-8B-AutoGaze-Video</td>
+                    <tr class="gradient-dark">
+                        <td><strong>NVILA-8B-HD-Video</strong></td>
                         <td>1024</td>
                         <td>3584</td>
                         <td><strong>67.0</strong></td>
@@ -539,7 +583,8 @@ ds = load_dataset("bfshi/HLVid")</code></pre>
     </div>
 
     <!-- Footer Page -->
-    <footer style="background: linear-gradient(180deg, var(--gradient-end), var(--gradient-start));">
+    <footer>
+<!--        style="background: linear-gradient(180deg, var(&#45;&#45;gradient-end), var(&#45;&#45;gradient-start));">-->
         <div class="container">
             <p>
                 This website is built on the <a href="https://shikun.io/projects/clarity">Clarity Template</a>, designed by <a href="https://shikun.io/">Shikun Liu</a>.
@@ -550,5 +595,264 @@ ds = load_dataset("bfshi/HLVid")</code></pre>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="assets/scripts/main.js"></script>
+    <script>
+        // Dim rects keyed by active regions (matching data-regions exactly).
+        // Each entry is an explicit array of {x,y,w,h} rects (% values) to shade,
+        // or {type:'poly', points:[[x,y],...], rounded:[indices]} for L-shapes etc.
+        // Individual and compound cases are defined separately so they can be tuned independently.
+        var spanDimRects = {
+            'arch-fig': {
+                // active=middle → dim left (individual) + right (individual)
+                'region-middle': [
+                    {x: 1,    y: 0, w: 22.5,  h: 100},
+                    {x: 82.5, y: 0, w: 16.25, h: 100}
+                ],
+                // active=left → dim middle+right as one seamless compound rect
+                'region-left': [
+                    {x: 23.5, y: 0, w: 76.5, h: 100}
+                ],
+                // active=right → dim left+middle as one seamless compound rect
+                'region-right': [
+                    {x: 1, y: 0, w: 82, h: 100}
+                ]
+            },
+            'results-fig': {
+                // active=a-e → dim only panel-f
+                'panel-a,panel-b,panel-c,panel-d,panel-e': [
+                    {x: 66.7, y: 50, w: 33.3, h: 50}
+                ],
+                // active=c,e → dim a+b+d as L-shape (rounded outside, sharp inside corners) + f rect
+                'panel-c,panel-e': [
+                    {type: 'poly',
+                     points: [[0,0],[66.7,0],[66.7,50],[33.3,50],[33.3,100],[0,100]],
+                     rounded: [0,1,4,5]},
+                    {x: 66.7, y: 50, w: 33.3, h: 50}
+                ],
+                // active=c,f → dim a+b+d+e merged into left 2/3 tall rect
+                'panel-c,panel-f': [
+                    {x: 0, y: 0, w: 66.7, h: 100}
+                ],
+                // Individual panel hover dimming
+                'panel-a': [
+                    {x: 33.3, y: 0, w: 66.7, h: 100},  // right 2/3
+                    {x: 0, y: 50, w: 33.3, h: 50}      // panel-d
+                ],
+                'panel-b': [
+                    {x: 0, y: 0, w: 33.3, h: 100},     // left column (a+d)
+                    {x: 66.7, y: 0, w: 33.3, h: 100},  // right column (c+f)
+                    {x: 33.3, y: 50, w: 33.3, h: 50}   // panel-e
+                ],
+                'panel-c': [
+                    {x: 0, y: 0, w: 66.7, h: 100},     // left 2/3 (a+b+d+e)
+                    {x: 66.7, y: 50, w: 33.3, h: 50}   // panel-f
+                ],
+                'panel-d': [
+                    {x: 0, y: 0, w: 100, h: 50},       // entire top row
+                    {x: 33.3, y: 50, w: 66.7, h: 50}   // e+f
+                ],
+                'panel-e': [
+                    {x: 0, y: 0, w: 33.3, h: 100},     // left column (a+d)
+                    {x: 66.7, y: 0, w: 33.3, h: 100},  // right column (c+f)
+                    {x: 33.3, y: 0, w: 33.3, h: 50}    // panel-b
+                ],
+                'panel-f': [
+                    {x: 0, y: 0, w: 66.7, h: 100},     // left 2/3 (a+b+d+e)
+                    {x: 66.7, y: 0, w: 33.3, h: 50}    // panel-c
+                ]
+            }
+        };
+
+        var DIM_RX = 12; // corner radius in pixels, matching border rects
+
+        // Build an SVG path d-string for a polygon where only corners at `roundedIndices`
+        // get a quadratic-bezier arc of radius `r` pixels; others are sharp.
+        // `points` is array of [xPct, yPct], converted to px using svgW/svgH.
+        function makeRoundedPolyPath(points, roundedIndices, svgW, svgH, r) {
+            var n = points.length;
+            // Convert to absolute px
+            var px = points.map(function(p) {
+                return [p[0] / 100 * svgW, p[1] / 100 * svgH];
+            });
+            var rounded = roundedIndices;
+            function isRounded(i) { return rounded.indexOf(i) !== -1; }
+            // For each vertex, compute the two trim points (where line meets arc tangent)
+            function trimPt(cur, prev, next) {
+                var dx1 = prev[0] - cur[0], dy1 = prev[1] - cur[1];
+                var d1 = Math.sqrt(dx1*dx1 + dy1*dy1);
+                var dx2 = next[0] - cur[0], dy2 = next[1] - cur[1];
+                var d2 = Math.sqrt(dx2*dx2 + dy2*dy2);
+                var trim = Math.min(r, d1/2, d2/2);
+                return [
+                    [cur[0] + dx1/d1*trim, cur[1] + dy1/d1*trim],
+                    [cur[0] + dx2/d2*trim, cur[1] + dy2/d2*trim]
+                ];
+            }
+            var d = '';
+            for (var i = 0; i < n; i++) {
+                var prev = px[(i - 1 + n) % n];
+                var cur  = px[i];
+                var next = px[(i + 1) % n];
+                if (isRounded(i)) {
+                    var tp = trimPt(cur, prev, next);
+                    var enterPt = tp[0]; // point on edge coming into this corner
+                    var exitPt  = tp[1]; // point on edge going out of this corner
+                    if (i === 0) {
+                        d += 'M ' + enterPt[0].toFixed(2) + ' ' + enterPt[1].toFixed(2) + ' ';
+                    } else {
+                        d += 'L ' + enterPt[0].toFixed(2) + ' ' + enterPt[1].toFixed(2) + ' ';
+                    }
+                    // Quadratic bezier: control point is the corner itself
+                    d += 'Q ' + cur[0].toFixed(2) + ' ' + cur[1].toFixed(2) + ' '
+                              + exitPt[0].toFixed(2) + ' ' + exitPt[1].toFixed(2) + ' ';
+                } else {
+                    // Sharp corner
+                    if (i === 0) {
+                        d += 'M ' + cur[0].toFixed(2) + ' ' + cur[1].toFixed(2) + ' ';
+                    } else {
+                        d += 'L ' + cur[0].toFixed(2) + ' ' + cur[1].toFixed(2) + ' ';
+                    }
+                }
+            }
+            // Close: line back to start
+            // If vertex 0 was rounded, we need to close to its enterPt (which was the M point)
+            // The path already closes naturally with Z
+            d += 'Z';
+            return d;
+        }
+
+        // Create a dim SVG element (rect or poly path) and return it.
+        function createDimShape(svg, shape) {
+            var NS = 'http://www.w3.org/2000/svg';
+            var el;
+            if (shape.type === 'poly') {
+                var w = svg.clientWidth  || svg.getBoundingClientRect().width;
+                var h = svg.clientHeight || svg.getBoundingClientRect().height;
+                el = document.createElementNS(NS, 'path');
+                el.setAttribute('d', makeRoundedPolyPath(shape.points, shape.rounded, w, h, DIM_RX));
+            } else {
+                el = document.createElementNS(NS, 'rect');
+                el.setAttribute('x', shape.x + '%');
+                el.setAttribute('y', shape.y + '%');
+                el.setAttribute('width', shape.w + '%');
+                el.setAttribute('height', shape.h + '%');
+                el.setAttribute('rx', DIM_RX);
+            }
+            el.setAttribute('fill', 'rgba(255,255,255,0.7)');
+            el.style.pointerEvents = 'none';
+            el.style.opacity = '0';
+            el.style.transition = 'opacity 0.2s ease';
+            el.classList.add('dynamic-dim');
+            // Trigger fade-in animation
+            setTimeout(function() { el.style.opacity = '1'; }, 10);
+            return el;
+        }
+
+        document.querySelectorAll('.inline-highlight[data-figure]').forEach(function(span) {
+            var figId = span.dataset.figure;
+            var activeRegions = span.dataset.regions;
+            var figWrapper = document.getElementById(figId);
+            var svg = figWrapper.querySelector('.fig-dim-svg');
+
+            span.addEventListener('mouseenter', function() {
+                svg.querySelectorAll('.dynamic-dim').forEach(function(el) { el.remove(); });
+                var shapes = (spanDimRects[figId] || {})[activeRegions] || [];
+                shapes.forEach(function(shape) {
+                    var el = createDimShape(svg, shape);
+                    svg.insertBefore(el, svg.firstChild);
+                });
+                var activeArr = activeRegions.split(',');
+                figWrapper.querySelectorAll('.region-border').forEach(function(el) {
+                    el.style.strokeOpacity = activeArr.indexOf(el.dataset.region) !== -1 ? '1' : '0';
+                });
+            });
+
+            span.addEventListener('mouseleave', function() {
+                svg.querySelectorAll('.dynamic-dim').forEach(function(el) { el.remove(); });
+                figWrapper.querySelectorAll('.region-border').forEach(function(el) {
+                    el.style.strokeOpacity = '0';
+                });
+            });
+        });
+
+        // Reverse hover: region -> text highlighting
+        document.querySelectorAll('.region-border').forEach(function(regionRect) {
+            var regionName = regionRect.dataset.region;
+            var figWrapper = regionRect.closest('.figure-wrapper');
+            var figId = figWrapper.id;
+            var svg = figWrapper.querySelector('.fig-dim-svg');
+
+            regionRect.addEventListener('mouseenter', function() {
+                // Reset ALL regions in this figure first
+                figWrapper.querySelectorAll('.region-border').forEach(function(el) {
+                    el.style.strokeOpacity = '0';
+                });
+
+                // Show only this region's border
+                regionRect.style.strokeOpacity = '1';
+
+                // Add dimming rectangles for non-hovered regions
+                svg.querySelectorAll('.dynamic-dim').forEach(function(el) { el.remove(); });
+                var shapes = (spanDimRects[figId] || {})[regionName] || [];
+                shapes.forEach(function(shape) {
+                    var el = createDimShape(svg, shape);
+                    svg.insertBefore(el, svg.firstChild);
+                });
+
+                // Highlight corresponding text spans
+                document.querySelectorAll('.inline-highlight[data-figure="' + figId + '"]').forEach(function(span) {
+                    var regions = span.dataset.regions.split(',');
+                    if (regions.indexOf(regionName) !== -1) {
+                        span.classList.add('region-hovered');
+                    }
+                });
+            });
+
+            regionRect.addEventListener('mouseleave', function() {
+                // Hide the border
+                regionRect.style.strokeOpacity = '0';
+                // Fade out dimming rectangles
+                svg.querySelectorAll('.dynamic-dim').forEach(function(el) {
+                    el.style.opacity = '0';
+                    setTimeout(function() { el.remove(); }, 200);
+                });
+                // Don't hide the entire SVG - let other regions stay hoverable
+
+                // Remove highlight from text
+                document.querySelectorAll('.inline-highlight.region-hovered').forEach(function(span) {
+                    span.classList.remove('region-hovered');
+                });
+            });
+        });
+
+        // OOD Carousel - Flickity initialization
+        var oodFlickity = new Flickity('.ood-flickity', {
+            cellAlign: 'center',
+            contain: true,
+            prevNextButtons: true,
+            pageDots: false,
+            wrapAround: true,
+            imagesLoaded: true
+        });
+
+        // Latency Carousel - Flickity initialization
+        var latencyFlickity = new Flickity('.latency-flickity', {
+            cellAlign: 'center',
+            contain: true,
+            prevNextButtons: true,
+            pageDots: false,
+            wrapAround: true,
+            imagesLoaded: true
+        });
+
+        // HLVid Carousel - Flickity initialization
+        var hlvidFlickity = new Flickity('.hlvid-flickity', {
+            cellAlign: 'center',
+            contain: true,
+            prevNextButtons: true,
+            pageDots: false,
+            wrapAround: true,
+            imagesLoaded: true
+        });
+    </script>
 </body>
 </html>

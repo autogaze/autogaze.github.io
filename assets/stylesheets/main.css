@@ -92,8 +92,8 @@ svg {
 }
 
 .container {
-  padding-right: calc(6vw - (100vw - 100%));
-  padding-left: 6vw;
+  padding-right: calc(9vw - (100vw - 100%));
+  padding-left: 9vw;
   flex: 1;
 }
 
@@ -126,16 +126,16 @@ svg {
     font-weight: 700;
     line-height: 1.2;
     padding: 1.5vh 0;
-    font-size: 15px;
+    font-size: 17px;
   }
 }
 @media screen and (min-width: 769px) {
   .container {
-    padding-right: calc(6.5vw - (100vw - 100%));
-    padding-left: 6.5vw;
+    padding-right: calc(9.5vw - (100vw - 100%));
+    padding-left: 9.5vw;
   }
   a, p, td, th, tr, code, pre, ol, ul, li, div {
-    font-size: 14px;
+    font-size: 16px;
   }
   h1 {
     font-size: 22px;
@@ -158,48 +158,48 @@ svg {
     font-weight: 700;
     line-height: 1.2;
     padding: 2vh 0;
-    font-size: 15px;
+    font-size: 17px;
   }
 }
 @media screen and (min-width: 992px) {
-  .container {
-    padding-right: calc(12vw - (100vw - 100%));
-    padding-left: 12vw;
-  }
-  a, p, td, th, tr, code, pre, ol, ul, li, div {
-    font-size: 14px;
-  }
-  h1 {
-    font-size: 22px;
-    line-height: 1.2;
-    padding: 1vh 0;
-    font-weight: 700;
-  }
-  h1.title {
-    padding: 0 0 1vh;
-    font-weight: 500;
-    font-size: 26px;
-  }
-  h2 {
-    line-height: 1.2;
-    padding: 1vh 0;
-    font-weight: 700;
-    font-size: 18px;
-  }
-  h3 {
-    font-weight: 700;
-    line-height: 1.2;
-    padding: 1vh 0;
-    font-size: 15px;
-  }
-}
-@media screen and (min-width: 1200px) {
   .container {
     padding-right: calc(15vw - (100vw - 100%));
     padding-left: 15vw;
   }
   a, p, td, th, tr, code, pre, ol, ul, li, div {
-    font-size: 15px;
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 22px;
+    line-height: 1.2;
+    padding: 1vh 0;
+    font-weight: 700;
+  }
+  h1.title {
+    padding: 0 0 1vh;
+    font-weight: 500;
+    font-size: 26px;
+  }
+  h2 {
+    line-height: 1.2;
+    padding: 1vh 0;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  h3 {
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 1vh 0;
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    padding-right: calc(18vw - (100vw - 100%));
+    padding-left: 18vw;
+  }
+  a, p, td, th, tr, code, pre, ol, ul, li, div {
+    font-size: 17px;
   }
   h1 {
     font-size: 32px;
@@ -227,8 +227,8 @@ svg {
 }
 @media screen and (min-width: 1600px) {
   .container {
-    padding-right: calc(18vw - (100vw - 100%));
-    padding-left: 18vw;
+    padding-right: calc(21vw - (100vw - 100%));
+    padding-left: 21vw;
   }
   a, p, td, th, tr, code, pre, ol, ul, li, div {
     font-size: 18px;
@@ -259,8 +259,8 @@ svg {
 }
 @media screen and (min-width: 2000px) {
   .container {
-    padding-right: calc(22vw - (100vw - 100%));
-    padding-left: 22vw;
+    padding-right: calc(25vw - (100vw - 100%));
+    padding-left: 25vw;
   }
   a, p, td, th, tr, code, pre, ol, ul, li, div {
     font-size: 18px;
@@ -291,8 +291,8 @@ svg {
 }
 @media screen and (min-width: 2400px) {
   .container {
-    padding-right: calc(24vw - (100vw - 100%));
-    padding-left: 24vw;
+    padding-right: calc(27vw - (100vw - 100%));
+    padding-left: 27vw;
   }
   a, p, td, th, tr, code, pre, ol, ul, li, div {
     font-size: 20px;
@@ -323,8 +323,8 @@ svg {
 }
 @media screen and (min-width: 3200px) {
   .container {
-    padding-right: calc(32vw - (100vw - 100%));
-    padding-left: 28vw;
+    padding-right: calc(35vw - (100vw - 100%));
+    padding-left: 31vw;
   }
 }
 footer {
@@ -360,8 +360,8 @@ footer p {
 div.container.blog#first-content {
   padding-top: 2vh;
   background-color: #f6f6f6;
-  padding-right: calc(5.1vw - (100vw - 100%));
-  padding-left: 5.1vw;
+  padding-right: calc(9.171vw - (100vw - 100%));
+  padding-left: 9.171vw;
 }
 div.container.blog#first-content div.blog-title {
   display: grid;
@@ -546,11 +546,11 @@ div.container.blog.gray-linear p.caption {
 @media screen and (min-width: 769px) {
   div.container.blog#first-content {
     padding-top: 3vh;
-    padding-right: calc(5.525vw - (100vw - 100%));
-    padding-left: 5.525vw;
+    padding-right: calc(9.68525vw - (100vw - 100%));
+    padding-left: 9.68525vw;
   }
   div.container.blog#first-content div.blog-title {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     column-gap: 2vw;
   }
   div.container.blog#first-content div.blog-title .blog-cover {
@@ -586,10 +586,10 @@ div.container.blog.gray-linear p.caption {
     margin-top: 2vh;
   }
   div.container.blog.main {
-    padding: 1vh 7.5vw;
+    padding: 1vh 9.68525vw;
   }
   div.container.blog.main.comment {
-    padding-left: 15vw;
+    padding-left: 18vw;
     padding-right: 0vw;
     display: grid;
     grid-template-columns: 70vw 13vw;
@@ -598,23 +598,23 @@ div.container.blog.gray-linear p.caption {
     display: none;
   }
   div.container.blog.large {
-    padding: 1vh 10vw;
+    padding: 1vh 13vw;
   }
   div.container.blog.extra-large {
-    padding: 1vh 8vw;
+    padding: 1vh 11vw;
   }
   div.container.blog.extra-extra-large {
-    padding: 1vh 8vw;
+    padding: 1vh 11vw;
   }
 }
 @media screen and (min-width: 992px) {
   div.container.blog#first-content {
     padding-top: 4vh;
-    padding-right: calc(10.2vw - (100vw - 100%));
-    padding-left: 10.2vw;
+    padding-right: calc(15.342vw - (100vw - 100%));
+    padding-left: 15.342vw;
   }
   div.container.blog#first-content div.blog-title {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     column-gap: 3vw;
   }
   div.container.blog#first-content div.blog-title .blog-intro {
@@ -636,10 +636,10 @@ div.container.blog.gray-linear p.caption {
     margin-top: 3vh;
   }
   div.container.blog.main {
-    padding: 1.5vh 10vw;
+    padding: 1.5vh 15.342vw;
   }
   div.container.blog.main.comment {
-    padding-left: 20vw;
+    padding-left: 23vw;
     padding-right: 0vw;
     display: grid;
     grid-template-columns: 60vw 18vw;
@@ -648,23 +648,23 @@ div.container.blog.gray-linear p.caption {
     display: none;
   }
   div.container.blog.large {
-    padding: 1.5vh 10.2vw;
+    padding: 1.5vh 13.2vw;
   }
   div.container.blog.extra-large {
-    padding: 1.5vh 10.2vw;
+    padding: 1.5vh 13.2vw;
   }
   div.container.blog.extra-extra-large {
-    padding: 1.5vh 10.2vw;
+    padding: 1.5vh 13.2vw;
   }
 }
 @media screen and (min-width: 1200px) {
   div.container.blog#first-content {
     padding-top: 6vh;
-    padding-right: calc(12.75vw - (100vw - 100%));
-    padding-left: 12.75vw;
+    padding-right: calc(18.4275vw - (100vw - 100%));
+    padding-left: 18.4275vw;
   }
   div.container.blog#first-content div.blog-title {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     column-gap: 4vw;
   }
   div.container.blog#first-content div.blog-title .blog-intro {
@@ -686,10 +686,10 @@ div.container.blog.gray-linear p.caption {
     margin-top: 4vh;
   }
   div.container.blog.main {
-    padding: 2vh 12.75vw;
+    padding: 2vh 18.4275vw;
   }
   div.container.blog.main.comment {
-    padding-left: 24vw;
+    padding-left: 27vw;
     padding-right: 0vw;
     display: grid;
     grid-template-columns: 60vw 18vw;
@@ -698,22 +698,22 @@ div.container.blog.gray-linear p.caption {
     display: block;
   }
   div.container.blog.large {
-    padding: 2vh 12.75vw;
+    padding: 2vh 18.4275vw;
   }
   div.container.blog.extra-large {
-    padding: 2vh 12.75vw;
+    padding: 2vh 18.4275vw;
   }
   div.container.blog.extra-extra-large {
-    padding: 2vh 12.75vw;
+    padding: 2vh 18.4275vw;
   }
 }
 @media screen and (min-width: 1600px) {
   div.container.blog#first-content {
-    padding-right: calc(15.3vw - (100vw - 100%));
-    padding-left: 15.3vw;
+    padding-right: calc(21.513vw - (100vw - 100%));
+    padding-left: 21.513vw;
   }
   div.container.blog#first-content div.blog-title {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     column-gap: 4vw;
   }
   div.container.blog#first-content div.blog-title .blog-intro {
@@ -735,31 +735,31 @@ div.container.blog.gray-linear p.caption {
     margin-top: 5vh;
   }
   div.container.blog.main {
-    padding: 2vh 15.3vw;
+    padding: 2vh 21.513vw;
   }
   div.container.blog.main.comment {
-    padding-left: 27vw;
+    padding-left: 30vw;
     padding-right: 0vw;
     display: grid;
     grid-template-columns: 50vw 23vw;
   }
   div.container.blog.large {
-    padding: 2vh 15.3vw;
+    padding: 2vh 21.513vw;
   }
   div.container.blog.extra-large {
-    padding: 2vh 15.3vw;
+    padding: 2vh 21.513vw;
   }
   div.container.blog.extra-extra-large {
-    padding: 2vh 15.3vw;
+    padding: 2vh 21.513vw;
   }
 }
 @media screen and (min-width: 2000px) {
   div.container.blog#first-content {
-    padding-right: calc(18.7vw - (100vw - 100%));
-    padding-left: 18.7vw;
+    padding-right: calc(25.627vw - (100vw - 100%));
+    padding-left: 25.627vw;
   }
   div.container.blog#first-content div.blog-title {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     column-gap: 5vw;
   }
   div.container.blog#first-content div.blog-title .blog-intro {
@@ -781,31 +781,31 @@ div.container.blog.gray-linear p.caption {
     margin-top: 5vh;
   }
   div.container.blog.main {
-    padding: 2vh 18.7vw;
+    padding: 2vh 25.627vw;
   }
   div.container.blog.main.comment {
-    padding-left: 30vw;
+    padding-left: 33vw;
     padding-right: 0vw;
     display: grid;
     grid-template-columns: 50vw 23vw;
   }
   div.container.blog.large {
-    padding: 2vh 26vw;
+    padding: 2vh 25.627vw;
   }
   div.container.blog.extra-large {
-    padding: 2vh 22vw;
+    padding: 2vh 25.627vw;
   }
   div.container.blog.extra-extra-large {
-    padding: 2vh 16vw;
+    padding: 2vh 25.627vw;
   }
 }
 @media screen and (min-width: 2400px) {
   div.container.blog#first-content {
-    padding-right: calc(20.4vw - (100vw - 100%));
-    padding-left: 20.4vw;
+    padding-right: calc(27.684vw - (100vw - 100%));
+    padding-left: 27.684vw;
   }
   div.container.blog#first-content div.blog-title {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     column-gap: 6vw;
   }
   div.container.blog#first-content div.blog-title .blog-intro {
@@ -827,31 +827,31 @@ div.container.blog.gray-linear p.caption {
     margin-top: 5vh;
   }
   div.container.blog.main {
-    padding: 2vh 20.4vw;
+    padding: 2vh 27.684vw;
   }
   div.container.blog.main.comment {
-    padding-left: 32vw;
+    padding-left: 35vw;
     padding-right: 0vw;
     display: grid;
     grid-template-columns: 50vw 23vw;
   }
   div.container.blog.large {
-    padding: 2vh 28vw;
+    padding: 2vh 27.684vw;
   }
   div.container.blog.extra-large {
-    padding: 2vh 24vw;
+    padding: 2vh 27.684vw;
   }
   div.container.blog.extra-extra-large {
-    padding: 2vh 18vw;
+    padding: 2vh 27.684vw;
   }
 }
 @media screen and (min-width: 3200px) {
   div.container.blog#first-content {
-    padding-right: calc(27.2vw - (100vw - 100%));
-    padding-left: 27.2vw;
+    padding-right: calc(35.912vw - (100vw - 100%));
+    padding-left: 35.912vw;
   }
   div.container.blog#first-content div.blog-title {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     column-gap: 7vw;
   }
   div.container.blog#first-content div.blog-title .blog-intro {
@@ -873,22 +873,22 @@ div.container.blog.gray-linear p.caption {
     margin-top: 5vh;
   }
   div.container.blog.main {
-    padding: 2vh 23.8vw;
+    padding: 2vh 35.912vw;
   }
   div.container.blog.main.comment {
-    padding-left: 38vw;
+    padding-left: 41vw;
     padding-right: 0vw;
     display: grid;
     grid-template-columns: 50vw 23vw;
   }
   div.container.blog.large {
-    padding: 2vh 32vw;
+    padding: 2vh 35.912vw;
   }
   div.container.blog.extra-large {
-    padding: 2vh 28vw;
+    padding: 2vh 35.912vw;
   }
   div.container.blog.extra-extra-large {
-    padding: 2vh 22vw;
+    padding: 2vh 35.912vw;
   }
 }
 /* ======================== Button ===================== */
