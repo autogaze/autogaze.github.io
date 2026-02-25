@@ -11,7 +11,7 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
     h1 {
         font-size: $large-font-size;
         line-height: 1.2;
-        padding: 2.5vh 0;
+        padding: 1.875rem 0;
         font-weight: 600;
         &.title {
             font-weight: 500;
@@ -21,15 +21,21 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
     }
     h2 {
         line-height: 1.2;
-        padding: 1.5vh 0;
+        padding: 1.125rem 0;
         font-weight: 600;
         font-size: $medium-font-size;
     }
     h3 {
         font-weight: 600;
         line-height: 1.2;
-        padding: 1.5vh 0;
+        padding: 1.125rem 0;
         font-size: $small-medium-font-size;
+    }
+
+    #first-content .info > div a.button {
+        flex: 1 1 calc(50% - 0.25rem);
+        min-width: 0;
+        text-align: center;
     }
 }
 
@@ -45,11 +51,11 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
     h1 {
         font-size: $large-font-size;
         line-height: 1.2;
-        padding: 3vh 0;
+        padding: 2.25rem 0;
         font-weight: 600;
 
         &.title {
-            padding: 0 0 1vh;
+            padding: 0 0 0.75rem;
             font-weight: 500;
             letter-spacing: 0px;
             font-size: $extra-large-font-size;
@@ -57,14 +63,14 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
     }
     h2 {
         line-height: 1.2;
-        padding: 2vh 0;
+        padding: 1.5rem 0;
         font-weight: 600;
         font-size: $medium-font-size;
     }
     h3 {
         font-weight: 600;
         line-height: 1.2;
-        padding: 2vh 0;
+        padding: 1.5rem 0;
         font-size: $small-medium-font-size;
     }
 }
@@ -81,19 +87,19 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
     h1 {
         font-size: $large-font-size;
         line-height: 1.2;
-        padding: 2vh 0;
+        padding: 1.5rem 0;
 
         &.title {
-            padding: 0 0 1vh;
+            padding: 0 0 0.75rem;
             font-size: $extra-large-font-size;
         }
     }
     h2 {
-        padding: 1vh 0;
+        padding: 0.75rem 0;
         font-size: $medium-font-size;
     }
     h3 {
-        padding: 1vh 0;
+        padding: 0.75rem 0;
         font-size: $small-medium-font-size;
     }
 }
@@ -110,19 +116,19 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
     h1 {
         font-size: $extra-large-font-size;
         line-height: 1.2;
-        padding: 2vh 0;
+        padding: 1.5rem 0;
 
         &.title {
-            padding: 0 0 1vh;
+            padding: 0 0 0.75rem;
             font-size: $extra-extra-large-font-size;
         }
     }
     h2 {
-        padding: 1vh 0;
+        padding: 0.75rem 0;
         font-size: $large-medium-font-size;
     }
     h3 {
-        padding: 1vh 0;
+        padding: 0.75rem 0;
         font-size: $medium-font-size;
     }
 }
@@ -139,19 +145,19 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
     h1 {
         font-size: $extra-extra-large-font-size;
         line-height: 1.2;
-        padding: 2.75vh 0;
+        padding: 2rem 0;
 
         &.title {
-            padding: 0 0 1vh;
+            padding: 0 0 0.75rem;
             font-size: $super-large-font-size;
         }
     }
     h2 {
-        padding: 1.5vh 0;
+        padding: 1.125rem 0;
         font-size: $extra-large-medium-font-size;
     }
     h3 {
-        padding: 1.5vh 0;
+        padding: 1.125rem 0;
         font-size: $large-medium-font-size;
     }
 }
@@ -168,19 +174,19 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
     h1 {
         font-size: $extra-extra-large-font-size;
         line-height: 1.2;
-        padding: 2.75vh 0;
+        padding: 2rem 0;
 
         &.title {
-            padding: 0 0 1vh;
+            padding: 0 0 0.75rem;
             font-size: $super-large-font-size;
         }
     }
     h2 {
-        padding: 1.5vh 0;
+        padding: 1.125rem 0;
         font-size: $large-font-size;
     }
     h3 {
-        padding: 1.5vh 0;
+        padding: 1.125rem 0;
         font-size: $medium-font-size;
     }
 }
@@ -199,19 +205,19 @@ h1, h2, h3, h4, h5, h6, p, a, code, pre, ol, ul, li {
     h1 {
         font-size: $extra-extra-large-font-size;
         line-height: 1.2;
-        padding: 2.75vh 0;
+        padding: 2rem 0;
 
         &.title {
-            padding: 0 0 1vh;
+            padding: 0 0 0.75rem;
             font-size: $super-large-font-size;
         }
     }
     h2 {
-        padding: 1.5vh 0;
+        padding: 1.125rem 0;
         font-size: $large-font-size;
     }
     h3 {
-        padding: 1.5vh 0;
+        padding: 1.125rem 0;
         font-size: $large-medium-font-size;
     }
 }
@@ -254,7 +260,7 @@ div.container.blog#first-content {
             p.abstract {
                 font-family: $default-sans;
                 font-weight: 300;
-                padding: 1vh 0;
+                padding: 0.75rem 0;
                 font-size: 90%;
                 line-height: 1.5;
             }
@@ -273,7 +279,7 @@ div.container.blog#first-content {
 
 div.container.blog {
     p.text{
-            padding: 1.5vh 0;
+            padding: 1.125rem 0;
             font-family: $default-serif, sans-serif;
     }
 
@@ -284,13 +290,13 @@ div.container.blog {
     ul, ol {
         li {
             p.text{
-                padding: 0vh 0 1vh 0 !important; 
+                padding: 0rem 0 0.75rem 0 !important; 
             }
         }
     }
 
     p.caption {
-        padding: 2vh 0;
+        padding: 1.5rem 0;
         font-weight: 400;
         line-height: 1.4;
         letter-spacing: 0px;
@@ -344,15 +350,15 @@ iframe, video {
 .teaser_video {
     width: 100%;
     aspect-ratio: 16 / 9;
-    margin-top: 5vh;
-    margin-bottom: 1vh;
+    margin-top: 3.75rem;
+    margin-bottom: 0.75rem;
 }
 
 .wide_video {
     width: 100%;
     aspect-ratio: 16 / 6;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
+    margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 
 .video-intro {
@@ -362,7 +368,7 @@ iframe, video {
     text-align: right;
     font-style: italic;
     font-size: 1.1em;
-    padding-bottom: 0.5vh;
+    padding-bottom: 0.375rem;
 }
 
 /* Two-column figure layout */
@@ -561,7 +567,7 @@ div.container.blog#first-content div.blog-title .blog-intro {
   display: grid !important;
   grid-template-columns: 1fr;
   gap: 1%;
-  padding: 6vh 0 !important;
+  padding: 4.5rem 0 !important;
   align-items: start;
 }
 
@@ -586,20 +592,20 @@ div.container.blog#first-content div.blog-title .blog-intro {
     width: 100%;
     height: 1px;
     background: rgba(0, 0, 0, 0.15);
-    margin-bottom: 3vh;
+    margin-bottom: 2.25rem;
   }
 }
 
 #first-content h1.title {
   font-size: 34px;
   line-height: 1.3;
-  margin: 0vh 0 5vh 0;
+  margin: 0rem 0 3.75rem 0;
   text-align: center;
 }
 
 #first-content p.author {
   line-height: 1.6;
-  margin-bottom: 1.5vh;
+  margin-bottom: 1.125rem;
   font-size: 20px;
   text-align: center;
 }
@@ -617,11 +623,18 @@ div.container.blog#first-content div.blog-title .blog-intro {
 
 #first-content p.abstract {
   line-height: 1.6;
-  margin-bottom: 2vh;
+  margin-bottom: 1.5rem;
 }
 
 #first-content .info {
-  margin: 3vh auto;
+  margin: 2.25rem auto;
+}
+
+#first-content .info > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
 }
 
 /* Author list styling - using flexbox for wrapped spacing */
@@ -690,7 +703,7 @@ div.container.blog#first-content div.blog-title .blog-intro {
   #first-content .author-table td {
     display: inline-block;
     width: 48%;
-    padding: 0.3vh 2% 0.3vh 0;
+    padding: 0.225rem 2% 0.225rem 0;
     white-space: normal;
   }
 }
@@ -706,8 +719,8 @@ div.container.blog#first-content div.blog-title .blog-intro {
 /* Section divider - horizontal line with extra spacing */
 /* Container holding the divider gets vertical padding */
 .container.blog.main:has(hr.section-divider) {
-  padding-top: 4vh;
-  padding-bottom: 4vh;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 hr.section-divider {
@@ -721,7 +734,7 @@ hr.section-divider {
 .table-wrapper {
   width: 100%;
   overflow-x: auto;
-  margin: 3vh 0;
+  margin: 2.25rem 0;
 }
 
 .results-table {
@@ -873,7 +886,7 @@ div.container.blog p.text.highlight-box {
     border: 1px solid #e1b76e;
     border-radius: 16px;
     padding: 1.0em 2em;
-    margin: 1.5vh auto;
+    margin: 1.125rem auto;
 }
 
 span.inline-highlight {
@@ -894,7 +907,7 @@ span.inline-highlight {
 .ood-carousel-container {
     width: 100%;
     max-width: 1200px;
-    margin: 3vh auto;
+    margin: 2.25rem auto;
 }
 
 .ood-flickity {
@@ -983,7 +996,7 @@ span.inline-highlight {
 .latency-carousel-container {
     width: 100%;
     max-width: 1200px;
-    margin: 3vh auto;
+    margin: 2.25rem auto;
 }
 
 .latency-flickity {
@@ -1072,7 +1085,7 @@ span.inline-highlight {
 .hlvid-carousel-container {
     width: 100%;
     max-width: 1200px;
-    margin: 3vh auto;
+    margin: 2.25rem auto;
 }
 
 .hlvid-flickity {
