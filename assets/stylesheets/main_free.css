@@ -2286,4 +2286,70 @@ a, button, input[type=button], input[type=submit] {
   cursor: pointer !important;
 }
 
+/* Panel lightbox — results-fig only */
+#results-fig .region-border {
+  cursor: pointer;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
+.panel-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+}
+.panel-lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.panel-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.panel-lightbox-content {
+  position: relative;
+  z-index: 1;
+  max-width: 90vw;
+  max-height: 85vh;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  padding-top: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.panel-lightbox-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 28px;
+  line-height: 1;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: color 0.15s ease;
+}
+.panel-lightbox-close:hover {
+  color: #e1b76e;
+}
+
+.panel-lightbox-img {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
+
 /*# sourceMappingURL=main_free.css.map */

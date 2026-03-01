@@ -89,13 +89,12 @@
                         <b>AutoGaze</b> is a lightweight module that removes redundant video patches before being processed downstream by a ViT or MLLM. Trained with next-token prediction and reinforcement learning, AutoGaze autoregressively <b>selects a minimal set of patches that reconstructs the video, eliminating redundancy while preserving information</b>. Empirically, AutoGaze reduces visual tokens by 4-100× and accelerates ViTs and MLLMs by up to 19×, enabling scaling MLLMs to 1K-frame 4K-resolution videos and achieving superior results on video benchmarks.
                     </p>
                     <p class="abstract">
-                        We also introduce <b>HLVid: the first high-resolution, long-form video QA benchmark</b>. On HLVid, an MLLM scaled with AutoGaze outperforms the previous SOTA MLLM by 6.3%.
+                        We also introduce <b>HLVid: the first high-resolution, long-form video QA benchmark</b>. On HLVid, an MLLM scaled with AutoGaze outperforms the baseline MLLM by 10.1%.
                     </p>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="container blog main">
         <video controls src="./assets/figures/video.mp4" class="teaser_video" title="AutoGaze: Efficient and Scalable Video Understanding via Autoregressive Gazing"></video>
         <p class="video-intro">watch this for a quick intro!</p>
@@ -594,6 +593,13 @@ with torch.inference_mode():
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
+<div id="panel-lightbox" class="panel-lightbox" aria-hidden="true">
+    <div class="panel-lightbox-backdrop"></div>
+    <div class="panel-lightbox-content">
+        <button class="panel-lightbox-close" aria-label="Close">&times;</button>
+        <div class="panel-lightbox-img"></div>
+    </div>
+</div>
     <script src="assets/scripts/main.js"></script>
     <script>
         // Dim rects keyed by active regions (matching data-regions exactly).
@@ -823,6 +829,94 @@ with torch.inference_mode():
                 });
             });
         });
+
+        // Panel lightbox — click to zoom on results-fig panels
+        (function() {
+            var panelCrops = {
+                'panel-a': { x: 0.5,  y: 1,  w: 32.3, h: 48 },
+                'panel-b': { x: 33.8, y: 1,  w: 32.3, h: 48 },
+                'panel-c': { x: 67.1, y: 1,  w: 32.4, h: 48 },
+                'panel-d': { x: 0.5,  y: 51, w: 32.3, h: 48 },
+                'panel-e': { x: 33.8, y: 51, w: 32.3, h: 48 },
+                'panel-f': { x: 67.1, y: 51, w: 32.4, h: 48 }
+            };
+
+            var lightbox = document.getElementById('panel-lightbox');
+            var lbImg = lightbox.querySelector('.panel-lightbox-img');
+            var lbClose = lightbox.querySelector('.panel-lightbox-close');
+            var lbBackdrop = lightbox.querySelector('.panel-lightbox-backdrop');
+            var resultsFig = document.getElementById('results-fig');
+            var sourceImg = resultsFig.querySelector('img');
+            var activePanel = null;
+
+            function sizeLightbox() {
+                var crop = panelCrops[activePanel];
+                if (!crop) return;
+
+                var natW = sourceImg.naturalWidth;
+                var natH = sourceImg.naturalHeight;
+                if (!natW || !natH) return;
+
+                var panelAspect = (natW * crop.w) / (natH * crop.h);
+
+                // Fit within 90vw x 85vh, minus content padding (40px top + 16px bottom, 16px each side)
+                var maxW = window.innerWidth * 0.9 - 32;
+                var maxH = window.innerHeight * 0.85 - 56;
+                var dispW, dispH;
+                if (maxW / maxH > panelAspect) {
+                    dispH = maxH;
+                    dispW = dispH * panelAspect;
+                } else {
+                    dispW = maxW;
+                    dispH = dispW / panelAspect;
+                }
+
+                var bgW = dispW * 100 / crop.w;
+                var bgH = dispH * 100 / crop.h;
+                var bgX = -(crop.x / 100) * bgW;
+                var bgY = -(crop.y / 100) * bgH;
+
+                lbImg.style.width = Math.round(dispW) + 'px';
+                lbImg.style.height = Math.round(dispH) + 'px';
+                lbImg.style.backgroundImage = 'url(' + sourceImg.src + ')';
+                lbImg.style.backgroundSize = Math.round(bgW) + 'px ' + Math.round(bgH) + 'px';
+                lbImg.style.backgroundPosition = Math.round(bgX) + 'px ' + Math.round(bgY) + 'px';
+            }
+
+            function openLightbox(panelId) {
+                activePanel = panelId;
+                sizeLightbox();
+                lightbox.classList.add('active');
+                lightbox.setAttribute('aria-hidden', 'false');
+                document.body.classList.add('lightbox-open');
+            }
+
+            function closeLightbox() {
+                activePanel = null;
+                lightbox.classList.remove('active');
+                lightbox.setAttribute('aria-hidden', 'true');
+                document.body.classList.remove('lightbox-open');
+            }
+
+            window.addEventListener('resize', function() {
+                if (activePanel) sizeLightbox();
+            });
+
+            // Attach click handlers to results-fig panels only
+            resultsFig.querySelectorAll('.region-border').forEach(function(rect) {
+                rect.addEventListener('click', function() {
+                    openLightbox(rect.dataset.region);
+                });
+            });
+
+            lbClose.addEventListener('click', closeLightbox);
+            lbBackdrop.addEventListener('click', closeLightbox);
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                    closeLightbox();
+                }
+            });
+        })();
 
         // OOD Carousel - Flickity initialization
         var oodFlickity = new Flickity('.ood-flickity', {
