@@ -235,8 +235,8 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="nav-right">
                 <div class="nav-links">
-                    <a href="#"><i class="fa-solid fa-book-open"></i> <span>Paper</span></a>
-                    <a href="#"><i class="fa-solid fa-code"></i> <span>Code</span></a>
+                    <a href="http://arxiv.org/abs/2603.12254" target="_blank"><i class="fa-solid fa-book-open"></i> <span>Paper</span></a>
+                    <a href="https://github.com/NVlabs/AutoGaze" target="_blank"><i class="fa-solid fa-code"></i> <span>Code</span></a>
                     <a href="https://huggingface.co/collections/bfshi/autogaze" target="_blank"><i class="fa-solid fa-database"></i> <span>Models, Data, Benchmark</span></a>
                     <a href="https://huggingface.co/spaces/bfshi/AutoGaze" target="_blank"><i class="fa-solid fa-laptop-code"></i> <span>Demo</span></a>
                 </div>

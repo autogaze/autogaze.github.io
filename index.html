@@ -103,7 +103,7 @@
     <div class="container blog main">
         <h1>Quickstart</h1>
         <p>
-            See <a href="https://github.com/NVlabs/AutoGaze">QUICK_START.md</a> in the codebase for the full guide.
+            See <a href="https://github.com/NVlabs/AutoGaze/blob/main/QUICK_START.md">QUICK_START.md</a> in the codebase for the full guide.
         </p>
         <br>
         <pre><code class="python">import torch
@@ -322,7 +322,7 @@ with torch.inference_mode():
             Although AutoGaze enables efficient understanding of long, high-resolution videos, <b>benchmarks to evaluate this capability are still missing</b>. We propose HLVid, the first long-form, high-resolution video QA benchmark featuring <b>300 QA pairs on 5-minute, 4K-resolution videos</b>. Each question is manually reviewed to ensure high resolution and understanding throughout the entire video is required.
         </p>
         <p class="text">
-            <a href="https://huggingface.co/collections/bfshi/autogaze" target="_blank">Check out and use HLVid on HuggingFace!</a>
+            <a href="https://huggingface.co/datasets/bfshi/HLVid" target="_blank">Check out and use HLVid on HuggingFace!</a>
         </p>
     </div>
 
@@ -574,10 +574,14 @@ with torch.inference_mode():
         <p class="text">
             If you find AutoGaze useful for your research, please cite:
         </p>
-<pre><code class="plaintext">{
-
-
-
+<pre><code class="plaintext">@misc{shi2026attendattentionefficientscalable,
+      title={Attend Before Attention: Efficient and Scalable Video Understanding via Autoregressive Gazing},
+      author={Baifeng Shi and Stephanie Fu and Long Lian and Hanrong Ye and David Eigen and Aaron Reite and Boyi Li and Jan Kautz and Song Han and David M. Chan and Pavlo Molchanov and Trevor Darrell and Hongxu Yin},
+      year={2026},
+      eprint={2603.12254},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2603.12254},
 }</code></pre>
     </div>
 
